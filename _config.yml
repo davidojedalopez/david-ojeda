@@ -1,2 +1,3 @@
 name: David's Site
 theme: jekyll-theme-slate
+permalink: /blog/:year/:month/:day/:title

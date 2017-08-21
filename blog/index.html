@@ -6,11 +6,18 @@ title: David's Blog
 <h1>{{ page.title }}</h1>
 <ul class="posts">
 
-    {% for post in site.posts %}
-        <li>
-            <span>
-                {{ post.date | date_to_string }}
-            </span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li>
+    {% assign postsByYearMonth = site.posts | group_by_exp:"post", "post.date | date: '%Y %b'"  %}
+    {% for yearMonth in postsByYearMonth %}
+        <h3>{{ yearMonth.name }}</h3>
+        <ul>
+            {% for post in yearMonth.items %}
+                <li>
+                    <span>
+                        {{ post.date | date_to_long_string }}
+                    </span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
     {% endfor %}
+
 </ul>

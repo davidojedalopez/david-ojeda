@@ -3,8 +3,8 @@ title:
   es: Blog del Perro  🐶
 email: david.ojeda.lopez@gmail.com
 description:
-  en: Software, motivation, life tricks, and some random stuff!
-  es: Software, motivación, trucos de vida y cosas aleatorias
+  en: Software tutorials, tricks, opinions, and more!!
+  es: ¡Tutoriales, trucos e ideas de software!
 name: David Ojeda López
 theme: jekyll-theme-slate
 permalink: /blog/:year/:month/:day/:title

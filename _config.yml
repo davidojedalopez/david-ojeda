@@ -1,3 +1,12 @@
-name: David's Site
+title:
+  en: Perro's Blog
+  es: Blog del Perro
+email: david.ojeda.lopez@gmail.com
+description:
+  en: Software, motivation, life tricks, and some random stuff!
+  es: Software, motivación, trucos de vida y cosas aleatorias
+name: David Ojeda López
 theme: jekyll-theme-slate
 permalink: /blog/:year/:month/:day/:title
+github_username: davidojedalopez
+twitter_username: DavidOjedaL

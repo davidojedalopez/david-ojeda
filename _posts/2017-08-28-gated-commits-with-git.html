@@ -10,7 +10,7 @@ lang: en
 <p><strong>Why do you want this?</strong> It makes your application more resilient to change since now you are running a set or sub-set of your tests even before that code is available to anyone else.</p>
 
 <p>I am going to show you how to implement a gated commit pattern with Git. In this example, our <strong>unit test suite</strong> will be the <em>gate</em> to allow our commits to make it to the codebase.</p>
-
+<hr>
 <br>
 
 <h2>What do you need?</h2>
@@ -29,7 +29,7 @@ lang: en
 
 <p>There is a folder named .git in which the hooks are stored. If you have never modified any hook, your .git directory structure will look like this:</p>
 
-<img src="/assets/git-tree-dir.png"/>
+<img src="/assets/gated-commits-with-git/git-tree-dir.png" class="img-centered"/>
 
 <br><br>
 
@@ -57,17 +57,22 @@ lang: en
 <code>grails test-app -unit</code>
 <br><br>
 
-<p>Click/touch image to repeat.</p>
-<img src="/assets/no-loop-pre-commit-hook-test.gif" onclick="this.src = this.src"/>
+<p>(Click/touch image to repeat)</p>
+<img src="/assets/gated-commits-with-git/no-loop-pre-commit-hook-test.gif" onclick="this.src = this.src" class="img-centered"/>
 
-<h4>
-    <strong>SUCCESS!</strong>
+<h4 class="text-center">
+    <strong>SUCCESS!</strong> 🎉
 </h4>
+
+<p>In the case that the test suite fails:</p>
+<img src="/assets/gated-commits-with-git/no-loop-pre-commit-hook-test-fail.gif" onclick="this.src = this.src" class="img-centered"/>
+
+<h4 class="text-center">Sad face ☹️</h4>
 
 <h3>Wrapping up</h3>
 
-<p>We have just created a Git pre-commit hook that contains specific commands to execute our app's unit test suite. Whenever a commit is issued, our tests run. If tests pass, we have a successful commit, if not, commit is rejected</p>
+<p>We have just created a Git pre-commit hook that contains specific commands to execute our app's unit test suite. <strong>Whenever a commit is issued</strong>, our tests run. If tests pass, we have a successful commit, if not, commit is rejected</p>
 
-<p>You can extend your tests of the pre-commit hook and build something as complex as you need. You can, for example, run a linter tool to make sure style guidelines are being followed. Or take it to the next level and integrate it with your Continuous Integration (CI) flow using additional hooks.</p>
+<p>You can extend your tests of the pre-commit hook and build something <strong>as complex as you need</strong>. You can, for example, run a linter tool to make sure style guidelines are being followed. Or take it to the next level and integrate it with your Continuous Integration flow using additional hooks.</p>
 
-<p>Hope this helps you build more resilience into your codebase and, ultimately, deliver more value to your customers in a safe and fast fashion!</p>
+<p>Hope this helps you build more resilience into your codebase and, ultimately, deliver more value to your customers in a <strong>safe and rapid</strong> fashion!</p>

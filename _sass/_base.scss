@@ -1,3 +1,103 @@
+.bouncer, .bouncer-image {
+  width: 200px;
+  height: 200px;
+}
+
+.bouncer {
+  position: absolute;
+  -webkit-animation: x 5s linear infinite alternate;
+          animation: x 5s linear infinite alternate;
+}
+
+.bouncer-image {
+  
+  -webkit-animation: y 3s linear infinite alternate;
+          animation: y 3s linear infinite alternate;
+}
+
+.x0{
+  -webkit-animation: x 5s linear infinite alternate;
+          animation: x 5s linear infinite alternate;
+}
+
+.x1{
+  -webkit-animation: x 4s linear infinite alternate;
+          animation: x 4s linear infinite alternate;
+}
+.x2{
+  -webkit-animation: x 3s linear infinite alternate;
+          animation: x 3s linear infinite alternate;
+}
+.x3{
+  -webkit-animation: x 2s linear infinite alternate;
+          animation: x 2s linear infinite alternate;
+}
+
+.x4{
+  -webkit-animation: x 10s linear infinite alternate;
+          animation: x 10s linear infinite alternate;
+}
+
+.x5{
+  -webkit-animation: x .6s linear infinite alternate;
+          animation: x .6s linear infinite alternate;
+}
+
+.y0{
+  -webkit-animation: y 2s linear infinite alternate;
+          animation: y 2s linear infinite alternate;
+}
+
+.y1{
+  -webkit-animation: y 4s linear infinite alternate;
+          animation: y 4s linear infinite alternate;
+}
+.y2{
+  -webkit-animation: y 5s linear infinite alternate;
+          animation: y 5s linear infinite alternate;
+}
+.y3{
+  -webkit-animation: y 6s linear infinite alternate;
+          animation: y 6s linear infinite alternate;
+}
+.y4{
+  -webkit-animation: y 8s linear infinite alternate;
+          animation: y 8s linear infinite alternate;
+}
+
+.y5{
+  -webkit-animation: y .7s linear infinite alternate;
+          animation: y .7s linear infinite alternate;
+}
+
+
+@-webkit-keyframes x {
+  100% {
+    -webkit-transform: translateX(calc(90vw - 100px));
+            transform: translateX(calc(90vw - 100px));
+  }
+}
+
+@keyframes x {
+  100% {
+    -webkit-transform: translateX(calc(90vw - 100px));
+            transform: translateX(calc(90vw - 100px));
+  }
+}
+@-webkit-keyframes y {
+  100% {
+    -webkit-transform: translateY(calc(90vh - 100px));
+            transform: translateY(calc(90vh - 100px));
+  }
+}
+@keyframes y {
+  100% {
+    -webkit-transform: translateY(calc(90vh - 100px));
+            transform: translateY(calc(90vh - 100px));
+  }
+}
+
+
 /**
  * Reset some basic elements
  */
@@ -24,8 +124,6 @@ body {
   font-feature-settings: "kern" 1;
   font-kerning: normal;
 }
-
-
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm

@@ -10,3 +10,4 @@ theme: jekyll-theme-slate
 permalink: /blog/:year/:month/:day/:title
 github_username: davidojedalopez
 twitter_username: DavidOjedaL
+future: true

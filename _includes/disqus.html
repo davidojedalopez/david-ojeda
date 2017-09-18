@@ -2,13 +2,13 @@
 <div id="disqus_thread"></div>
 <script>
     var disqus_config = function () {
-    this.page.url = "https://davidojedalopez.github.io/blog/{{ page.url }}"; // <--- use canonical URL
+    this.page.url = "https://davidojedalopez.github.io{{ page.url }}";
     this.page.identifier = "{{ page.id }}";
     };
-    (function() { // DON'T EDIT BELOW THIS LINE
+    (function() { 
     var d = document, s = d.createElement('script');
 
-    s.src = 'https://perrosblog-1.disqus.com/embed.js'; // <--- use Disqus shortname
+    s.src = 'https://perrosblog-1.disqus.com/embed.js';
 
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);

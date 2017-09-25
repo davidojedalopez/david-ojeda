@@ -29,7 +29,7 @@ comments: true
 
 <h3>Setting up a pre-commit hook</h3>
 
-<p>There is a folder named .git in which the hooks are stored. If you have never modified any hook, your .git directory structure will look like this:</p>
+<p>In your Git repo, there is a folder named .git in which the hooks are stored. If you have never modified any hook, your .git directory structure will look like this:</p>
 
 <img src="/assets/gated-commits-with-git/git-tree-dir.png" class="img-centered"/>
 
@@ -73,7 +73,7 @@ comments: true
 
 <h3>Wrapping up</h3>
 
-<p>We have just created a Git pre-commit hook that contains specific commands to execute our app's unit test suite. <strong>Whenever a commit is issued</strong>, our tests run. If tests pass, we have a successful commit, if not, commit is rejected</p>
+<p>We have just created a Git pre-commit hook that contains specific commands to execute our app's unit test suite. <strong>Whenever a commit is issued</strong>, our tests run. If tests pass, we have a successful commit, if not, commit is rejected.</p>
 
 <p>You can extend your tests of the pre-commit hook and build something <strong>as complex as you need</strong>. You can, for example, run a linter tool to make sure style guidelines are being followed. Or take it to the next level and integrate it with your Continuous Integration flow using additional hooks.</p>
 

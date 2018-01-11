@@ -1,0 +1,66 @@
+---
+layout: post
+title: Extend nginx/Apache Proxy Configurations on AWS ElasticBeanstalk
+ref: extend-nginx-apache-proxy-configurations-on-aws-elasticbeanstalk
+lang: en
+date: 2018-01-11
+comments: true
+---
+
+<p>AWS ElasticBeanstalk applications use either an nginx or Apache proxy to relay requests. Using the .ebextensions feature of ElasticBeanstalk we can extend the configuration of these proxies. If you don't know how .ebextensions work you can read more <a href="">here.</a></p>
+
+<p>I'm going to extend the default nginx proxy configurations using .ebextensions. The same procedure can be used to extend an Apache proxy.</p>
+
+<h1>
+    Create .conf file
+</h1>
+
+<p>First we need to create a .conf file with the desired directives. Here is mine- named proxy.conf -to increase some timeouts of the proxy:</p>
+
+{% gist b3735a658fbd645b38a13405f9eae8fa %}
+
+<h1>Create nginx conf.d directory</h1>
+
+<p>Now we need the directory where our configuration file will be. Under .ebextensions, create a directory named 'nginx', and inside it another named 'conf.d'. Then add the file you just created. Your dir structure should look like this:</p>
+<!--
+.ebextensions<br>
+└─ nginx<br>
+&nbsp;&nbsp;&nbsp; └─ conf.d<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └─ proxy.conf<br>
+<br> -->
+
+.ebextensions<br>
+&nbsp;`-- nginx<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `-- conf.d<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `-- proxy.conf<br>
+<br>
+
+<p>Now, when you deploy a new version of your application, ElasticBeanstalk will automatically copy your files on the .ebextensions > nginx > conf.d directory to the /etc/nginx/conf.d/ directory of your instances.</p>
+
+<p>This all works because the default nginx.conf file- on line 21 -specifies to include all .conf files under the conf.d directory:</p>
+
+{% gist 680ae751eb2a3fd46c3bca04a33c5a4c %}
+
+<p>The directives from the .conf file will be added to the <em>http</em> block of the default configuration.</p>
+
+<p>If you need to add directives to the <em>server</em> block you will need to add .conf files to the elasticbeanstalk folder (see line 39 of previous Gist). That dir structure would look:</p>
+
+.ebextensions<br>
+&nbsp;`-- nginx<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `-- conf.d<br>
+&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; `-- elasticbeanstalk<br>
+&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `-- my_other_conf.conf<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `-- proxy.conf<br>
+<br>
+
+<p>Same can be done for an Apache proxy. The difference is on the directory structure. For Apache your structure should be this:</p>
+
+.ebextensions<br>
+&nbsp;`-- httpd<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `-- conf<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `-- proxy.conf<br>
+<br>
+
+<h1>Wrap-up</h1>
+
+<p>Using .ebextensions is by far the simplest method to add custom configurations to your nginx or Apache proxy. Create as many configuration files as you need and add them to the corresponding directory under .ebextensions and you are done.</p>

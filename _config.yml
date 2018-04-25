@@ -13,3 +13,4 @@ twitter_username: DavidOjedaL
 future: true
 plugins:
   - jekyll-gist
+  - jekyll-sitemap

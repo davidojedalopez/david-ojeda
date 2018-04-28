@@ -1,11 +1,11 @@
----
+--- 
 layout: post
-title: Run a Second MySQL Instance with a Different Version
-ref: run-a-second-mysql-instance-with-a-different-versions
-lang: en
-date: 2018-04-25
-comments: true
-categories: [MySQL, Docker]
+title: Run a Second MySQL Instance with a Different Version 
+ref: run-a-second-mysql-instance-with-a-different-versions 
+lang: en 
+date: 2018-04-25 
+comments: true 
+categories: [MySQL, Docker] 
 ---
 
 <p>You may run into a situation where you need to have two different versions of MySQL to test different applications. Something similar happened to me.</p>
@@ -31,7 +31,8 @@ categories: [MySQL, Docker]
 
 <pre><code>sudo docker run --name mysql-56-container -p 127.0.0.1:3310:3306 -e MYSQL_ROOT_PASSWORD=mysuperpassword -d mysql:5.6</code></pre>
 
-<p>This command will download an image with MySQL 5.6 and spin off the Docker container. MySQL will be installed on port 3306, but the host machine will use port 3310 to forward to 3306. Note that you need to <b>provide a password for the root user</b>. In this case is just <i>mysuperpassword</i>.</p>
+<p>This command will download an image with MySQL 5.6 and spin off the Docker container. MySQL will be installed on port 3306, but the host machine will use port 3310 to forward to 3306. Note that you need to <b>provide a password for the root user</b>.
+    In this case is just <i>mysuperpassword</i>.</p>
 
 <p>At this point you can connect to the database from the Terminal using this command and your previously defined password:</p>
 
@@ -47,16 +48,24 @@ categories: [MySQL, Docker]
 
 <p>This will create a [database name].sql file that you'll import into the 5.6 MySQL instance.</p>
 
+<h1>Create empty database on your new instance</h1>
+
+<p>Connect to your new MySQL instance with the command previoulsy mentioned and create and empty database with the proper name you need:</p>
+
+<pre><code>create database [database name]</code></pre>
+
 <h1>Import your .sql file</h1>
 
 <p>Now you need to import your database data to your MySQL 5.6 instance. Run:</p>
 
-<pre><code>mysql -u root -p [new database name] < /path/to/[database name].sql</code></pre>
+<pre><code>mysql -u root -p --host 127.0.0.1 --port 3310 [new database name] < /path/to/[database name].sql</code></pre>
 
 <p>And that would do it. Your MySQL 5.6 instance should now have a copy of your database data from the MySQL 5.7 instance.</p>
 
 <hr style="margin-top: 40px; margin-bottom: 20px;">
 
-<p>I hope this helps you since it has helped me. I needed to run an older version of MySQL because some queries on an app were giving me different results on my development environment than on production. The cause was the MySQL version difference between them.</p>
+<p>I hope this helps you since it has helped me. I needed to run an older version of MySQL because some queries on an app were giving me different results on my development environment than on production. The cause was the MySQL version difference between
+    them.
+</p>
 
 <p>And remember, is a really good idea to have your development environment as close as the one on production.</p>

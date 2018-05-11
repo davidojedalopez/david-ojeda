@@ -8,7 +8,7 @@ comments: true
 categories: [CSS, HTML]
 ---
 
-I recenlty came across a bug on our landing page which caused a weird blank space overflow on the right side:
+I recently came across a bug on our landing page which caused a weird blank space overflow on the right side:
 
 ![Landing page with extra white space on right side][landing-page-bug]
 
@@ -28,12 +28,9 @@ Now, I could find the section that was causing the problem:
 
 ![Landing page with ghost elements visible][landing-page-ghost]
 
-At the end it was a matter of fixing some mismatching HTML elements.
+In the end, it was a matter of fixing some mismatching HTML elements.
 
 Would've had this CSS styles helping me debug from the beginning, could've saved me a couple hours of work 🤦🏻‍♂️
-
-
-
 
 
 [landing-page-bug]: /assets/find-ghost-css-elements/landing-page-bug.png "Landing page with extra white space on right side"

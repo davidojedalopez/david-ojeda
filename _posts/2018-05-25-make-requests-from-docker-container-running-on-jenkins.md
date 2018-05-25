@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Make Requests from Docker Container Running on Jenkins
-ref: make-request-from-docker-conatiner-running-on-jenkins
+ref: make-requests-from-docker-conatiner-running-on-jenkins
 lang: en
 date: 2018-05-25
 comments: true
@@ -102,7 +102,7 @@ num  target     prot opt source               destination
 1    RETURN     all  --  0.0.0.0/0            0.0.0.0/0
 ```
 
-Then, in my case, replace the first two entries of both the PREROUTING and OUTPUT chain:
+The value **0.0.0.0/0** on the source column refers to **all** trafic. So, in my case, I need to replace the first two entries of both the PREROUTING and OUTPUT chain:
 
 **Note**: The default Docker subnet is **172.17.0.0/16**. If you changed the default configurations make sure to change them in the commands also.
 

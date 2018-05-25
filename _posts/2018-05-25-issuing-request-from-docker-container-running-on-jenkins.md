@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Issuing Requests from Docker Container Running on Jenkins
-ref: issuing-request-from-docker-conatiner-running-on-jenkins
+title: Make Requests from Docker Container Running on Jenkins
+ref: make-request-from-docker-conatiner-running-on-jenkins
 lang: en
 date: 2018-05-25
 comments: true

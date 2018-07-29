@@ -6,6 +6,7 @@ lang: en
 date: 2018-07-29
 comments: true
 categories: [aws, iam]
+published: true
 ---
 
 *[Part one]({{ site.baseurl }}{% post_url 2018-07-29-aws-iam-pt1-the-basics %}) of this series covers IAM basics and a general use case.*
@@ -112,7 +113,9 @@ Now you are redirected to the policy creation page. There are two ways to create
 
 We're going to use the Visual editor option because I think is more friendly. Here, he need to select to which service(s) we want access to, to what specific actions, and to what specific resources of this/these service(s) we can access.
 
-We want S3 read-only access to the billing reports bucket. **NOTE**: I'm assuming you have at least one S3 bucket with which you can try this exercise. If you don't have any, please go to S3 and create one with the default settings.
+We want S3 read-only access to the billing reports bucket.
+
+**NOTE**: I'm assuming you have at least one S3 bucket with which you can try this exercise. If you don't have any, please go to S3 and create one with the default settings.
 
 First permission you need to add is this:
 
@@ -135,6 +138,8 @@ Last but not least, this permission will allow the user to actually access the o
 We're using the wildcard "**\***" after the bucket name as our resource ARN to indicate that we want access to every object in the bucket.
 
 Go to next step, name your policy, add an useful description and finish the policy creation! I recommend you to have a naming convention for every resource you create. It doesn't matter much which convention you choose, but **stick with it**. I use *camel caps* (ThisIsCamelCaps) because AWS managed policies are named that way.
+
+**TIP**: You can use the [AWS Policy Simuator](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_testing-policies.html) to test your policies and verify they only provide access to the resources they need to.
 
 ### Use custom policy
 You now have your accountant custom policy with S3 read-only access. Last thing you need to do to solve the stated problem is to create your accountant group and user, and tie them together. You can do that with the knowledge acquired so far 😉

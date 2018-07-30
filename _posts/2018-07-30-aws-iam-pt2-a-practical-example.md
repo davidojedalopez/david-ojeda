@@ -3,13 +3,12 @@ layout: post
 title: AWS IAM Pt. 2 - A Practical Example
 ref: road-to-aws-certification-iam-pt2
 lang: en
-date: 2018-07-29
+date: 2018-07-30
 comments: true
 categories: [aws, iam]
-published: true
 ---
 
-*[Part one]({{ site.baseurl }}{% post_url 2018-07-29-aws-iam-pt1-the-basics %}) of this series covers IAM basics and a general use case.*
+*[Part one]({{ site.baseurl }}{% post_url 2018-07-30-aws-iam-pt1-the-basics %}) of this series covers IAM basics and a general use case.*
 
 *Part two is the implementation of the use case in part one, that is, the creation of users, groups and policies to restrict access to some AWS services.*
 

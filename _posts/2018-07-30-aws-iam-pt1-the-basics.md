@@ -3,14 +3,14 @@ layout: post
 title: AWS IAM Pt. 1 - The Basics
 ref: aws-iam-pt1-the-basics
 lang: en
-date: 2018-07-29
+date: 2018-07-30
 comments: true
 categories: [aws, iam]
 ---
 
 *Part one of this series covers IAM basics and a general use case.*
 
-*[Part two]({{ site.baseurl }}{% post_url 2018-07-29-aws-iam-pt2-a-practical-example %}) is the implementation of the use case in part one, that is, the creation of users, groups and policies to restrict access to some AWS services.*
+*[Part two]({{ site.baseurl }}{% post_url 2018-07-30-aws-iam-pt2-a-practical-example %}) is the implementation of the use case in part one, that is, the creation of users, groups and policies to restrict access to some AWS services.*
 
 ---
 ---
@@ -63,7 +63,7 @@ With these specifications in mind, we can proceed now to create each group and u
 
 What about the sales person and accountant? The sales person doesn't need AWS access at the moment, so no user for him 🙃 Your accountant does need to access an S3 bucket where the AWS billing is stored every month though. For this person you want to create a single user with only console access and with only read permissions to a specific bucket on your AWS account.
 
-And that's an overview on how IAM can help you manage and control access to your AWS resources. I know this post is very general and doesn't dive deep into how you *actually* achieve this. That's why we're now going to implement this solution [on the next blog post!]({{ site.baseurl }}{% post_url 2018-07-29-aws-iam-pt2-a-practical-example %})
+And that's an overview on how IAM can help you manage and control access to your AWS resources. I know this post is very general and doesn't dive deep into how you *actually* achieve this. That's why we're now going to implement this solution [on the next blog post!]({{ site.baseurl }}{% post_url 2018-07-30-aws-iam-pt2-a-practical-example %})
 
 
 **Thanks for reading me!** ❤️

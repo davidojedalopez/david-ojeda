@@ -13,10 +13,13 @@ categories: [aws, iam]
 *[Part two]({{ site.baseurl }}{% post_url 2018-07-30-aws-iam-pt2-a-practical-example %}) is the implementation of the use case in part one, that is, the creation of users, groups and policies to restrict access to some AWS services.*
 
 ---
+
 ---
 
-# What's IAM? 🔑
-AWS **I**dentity and **A**ccess **M**anagement, called **IAM**, is a feature of AWS that allows you to have fine-grained control over whom can access any of your AWS resources and to what extent. Also, it's **free**.
+<br>
+
+# What's AWS IAM? 🔑
+AWS **I**dentity and **A**ccess **M**anagement, called **IAM**, is a feature of AWS that allows you to have fine-grained control over who can access any of your AWS resources and to what extent. Also, it's **free**.
 
 # What can it do?
 It can **allow and restrict access** to specific services and actions to specific users or roles- more on this below.
@@ -31,13 +34,13 @@ Once you start using IAM you're going to stumble upon some of these concepts and
   **Policies are the cornerstone of IAM**. They are the set of rules and restrictions that define the level of access to services and actions to your AWS resources.
 
 - ## Users
-  You can think of IAM users as **physical individuals** that need some level of access to your AWS resources either throught the console and/or programatically. E.g.: John needs check if the servers are healthy- **he needs EC2 access**.
+  You can think of IAM users as **physical individuals** that need some level of access to your AWS resources either through the console and/or programmatically- e.g., John needs to check if the servers are healthy. **He needs EC2 access**. *(All AWS acronyms used on this post are listed at the end)*
 
 - ## Groups
-  Groups are no more than a collection of users that share the same restrictions. Using groups helps you re-use your policies. E.g.: Your networking team need to do a security audit on your network settings- **they all need VPC access**.
+  Groups are no more than a collection of users that share the same restrictions. Using groups helps you re-use your policies- e.g., your networking team need to do a security audit on your network settings. **They all need VPC access**.
 
 - ## Roles
-  Roles are somehow similar to users, except for the fact that roles are used to restrict access from resource to resource. E.g.: Your server needs to notify a queue of an event- **your EC2 servers need SQS access**.
+  Roles are somehow similar to users, except for the fact that roles are used to restrict access from resource to resource- e.g., your server needs to notify a queue of an event. **Your EC2 servers need SQS access**.
 
 We're not yet gonna dive on how to create any of these entities. First, let me show you a common situation where IAM can greatly help you.
 
@@ -46,7 +49,7 @@ Let's suppose you're the CTO of a company with:
 - One salesperson- Peter
 - One accountant- Mary
 
-The developers have different roles on your company: Sally is a DevOps engineer, John and Maria are web developers, and Jane's a mobile developer.
+The developers have different roles on your company: Sally is a DevOps engineer, John and Maria are web developers, and Jane is a mobile developer.
 
 You all use AWS, but each needs a different set of services. You don't want every employee to have acccess to every resource, so you decide to use IAM to solve this problem.
 
@@ -55,16 +58,18 @@ With IAM, you create a **group** for each job role and attach a **policy** for t
 
 Let's define what do each of these groups need:
 
-- **DevOps developers**: Console and programmatic access to ElasticBeanstalk, EC2, S3 ans SQS
+- **DevOps developers**: Console and programmatic access to ElasticBeanstalk, EC2, S3 and SQS
 - **Web developers**: Console and programmatic access to ElasticBeanstalk and S3
 - **Mobile developers**: Programmatic access to S3 and AWS mobile services such as Cognito
+- **Accountants**: S3 read-only console access to an AWS billing bucket
 
 With these specifications in mind, we can proceed now to create each group and user and assign, or not, console and programmatic access to AWS as well as the needed policies.
 
-What about the sales person and accountant? The sales person doesn't need AWS access at the moment, so no user for him 🙃 Your accountant does need to access an S3 bucket where the AWS billing is stored every month though. For this person you want to create a single user with only console access and with only read permissions to a specific bucket on your AWS account.
+What about the salesperson? The salesperson doesn't need AWS access at the moment, so no user for him 🙃
 
-And that's an overview on how IAM can help you manage and control access to your AWS resources. I know this post is very general and doesn't dive deep into how you *actually* achieve this. That's why we're now going to implement this solution [on the next blog post!]({{ site.baseurl }}{% post_url 2018-07-30-aws-iam-pt2-a-practical-example %})
+# Wrap up
 
+This was a very broad overview on how IAM can help you manage and control access to your AWS resources. I know this post is very general and doesn't dive deep into how you *actually* achieve this. That's why we're now going to implement this solution [on the next blog post!]({{ site.baseurl }}{% post_url 2018-07-30-aws-iam-pt2-a-practical-example %})!
 
 **Thanks for reading me!** ❤️
 

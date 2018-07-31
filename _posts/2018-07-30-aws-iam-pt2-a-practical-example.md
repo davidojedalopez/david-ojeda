@@ -150,7 +150,7 @@ All your users should now have permissions to perform their jobs and everyone sh
 
 **Thanks for reading me!** ❤️
 
-[iam-dashboard-group-creation]: /assets/iam/pt2/pt2-1.png "IAM Dashboard with group section selected"
+#####[iam-dashboard-group-creation]: /assets/iam/pt2/pt2-1.png "IAM Dashboard with group section selected"
 [iam-dashboard-group-name]: /assets/iam/pt2/pt2-2.png "IAM Group creation - Group name"
 [iam-policy-details]: /assets/iam/pt2/pt2-3.png "IAM policy details - AWS Cognito Power User"
 [iam-dashboard-user-creation]: /assets/iam/pt2/pt2-4.png "IAM Dashboard with user section selected"

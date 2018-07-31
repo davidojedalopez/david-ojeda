@@ -50,9 +50,9 @@ On the next screen you will get a seemingly endless list of already created poli
 
 Selecting these policies you are saying: *All users in this group will have full access to S3, EC2, ElasticBeanstalk and SQS.* Go for it.
 
-**NOTE**: You can proceed to the next step without attaching any policy. That means that the group will have no permissions at all.
-
-**NOTE TWO**: If the name of a policy is not descriptive enough you can always go to the policies section of the IAM dashboard and look for the details:
+**NOTES**:
+- You can proceed to the next step without attaching any policy. That means that the group will have no permissions at all.
+- If the name of a policy is not descriptive enough you can always go to the policies section of the IAM dashboard and look for the details:
 
 ![][iam-policy-details]
 
@@ -150,7 +150,8 @@ All your users should now have permissions to perform their jobs and everyone sh
 
 **Thanks for reading me!** ❤️
 
-#####[iam-dashboard-group-creation]: /assets/iam/pt2/pt2-1.png "IAM Dashboard with group section selected"
+
+[iam-dashboard-group-creation]: /assets/iam/pt2/pt2-1.png "IAM Dashboard with group section selected"
 [iam-dashboard-group-name]: /assets/iam/pt2/pt2-2.png "IAM Group creation - Group name"
 [iam-policy-details]: /assets/iam/pt2/pt2-3.png "IAM policy details - AWS Cognito Power User"
 [iam-dashboard-user-creation]: /assets/iam/pt2/pt2-4.png "IAM Dashboard with user section selected"

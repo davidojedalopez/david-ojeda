@@ -20,7 +20,7 @@ Moreover, I don't think those words add any value to your writing. Does it make 
 
 While thinking about this I decided to do a little page where you can paste your text and it will highlight words like *obvious*, *simply*, *just*, etc. I decided to go with React/Redux, some deep learning algorithms and everything running serverless. **Just kidding**, it's an static website with inline CSS and JavaScript that uses a Regex 🙃 [Check it out here!](https://simply.davidojeda.mx/)
 
-In my opinion, we should try to avoid those words as much as we can to stop discouraing others and to add more value to our ideas. Also, you use fewer words.
+In my opinion, we should try to avoid those words as much as we can to stop discouraging others and to add more value to our ideas. Also, you use fewer words.
 
 
 Thanks for reading me! ❤️

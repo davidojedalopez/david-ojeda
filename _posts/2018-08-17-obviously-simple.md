@@ -1,6 +1,6 @@
 ---
 layout: post
-title: It's obviously simple!
+title: It's Obviously Simple!
 ref: obviously-simple
 lang: en
 date: 2018-08-17

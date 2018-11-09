@@ -47,7 +47,7 @@ Hell, that morning **I was even more productive because Basecamp remained read-o
 
 I've been part, and cause, of outages at my company and it's really stressful. And we don't even handle the amount of traffic Basecamp 3 does.
 
-So, as DHH states it, **this is a reminder to stay humble**. We could be the next ones involved in a situation like this. **We all make mistakes, that's inevitable**, and knowing how to properly communicate them is what matters in the long run.
+So, as DHH states it, **this is a reminder to stay humble**. We could be the next ones involved in a situation like this. **We all make mistakes, that's inevitable**, but knowing how to properly communicate them is what matters in the long run.
 
 ---
 

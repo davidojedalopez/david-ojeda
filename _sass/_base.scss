@@ -302,3 +302,27 @@ pre {
     }
   }
 }
+
+button {
+  transition: background-color 0.3s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  padding-bottom: 2px;
+  transition: all .2s ease-in-out;  
+  background: linear-gradient(to right, orange, yellow, green, cyan, blue, violet);  
+  background-size: 0 2px;
+  background-repeat: no-repeat;
+  background-position: left 100%;
+  &:hover {
+    background-size: 100% 2px;      
+    text-decoration: none;
+  }
+}
+
+.twitter-tweet {
+  margin: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}

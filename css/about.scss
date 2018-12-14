@@ -2,6 +2,7 @@
 ---
 @charset "utf-8";
 
+$timeline-element-background-color: rgba(172, 104, 9, .8);
 
 .about-container {
 
@@ -17,3 +18,157 @@
 .amazon-orange {
     color:  #FF9900;
 }
+
+.timeline {
+    height: 450px;
+    overflow-y: scroll;
+    margin-bottom: 30px;
+}
+
+.timeline ul {
+  margin-left: 0;
+}
+
+.timeline ul li {
+    list-style-type: none;
+    position: relative;
+    width: 5px;
+    margin: 0 auto;
+    padding-top: 50px;
+    background-image: linear-gradient(to bottom, red, orange, yellow, green, blue, indigo, violet) !important;        
+}
+
+  .timeline ul li::after {
+    content: '🐶';
+    position: absolute;    
+    bottom: 6px;
+    transform: translateX(-39%);
+    width: 30px;
+    height: 30px;
+    font-size: 1.7em;   
+}
+
+
+.timeline ul li:last-child::after {
+  content: '🐩';
+  position: absolute; 
+  bottom: 6px;
+  transform: translateX(-39%);
+  width: 30px;
+  height: 30px;
+  font-size: 1.7em;
+}
+
+.timeline ul li:first-child::after {
+  content: '🐕';
+  position: absolute;  
+  bottom: 6px;
+  transform: translateX(-45%);
+  width: 30px;
+  height: 30px;
+  font-size: 1.7em;
+}
+
+.timeline ul li div {
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 370px;
+    padding: 12px;
+    background: $timeline-element-background-color;
+  }
+   
+  .timeline ul li div::before {
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+
+  .timeline ul li:nth-child(odd) div {
+    left: 45px;
+  }
+   
+  .timeline ul li:nth-child(odd) div::before {
+    left: -16px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent $timeline-element-background-color transparent transparent;
+  }
+
+  .timeline ul li:nth-child(even) div {
+    left: -434px;
+  }
+   
+  .timeline ul li:nth-child(even) div::before {
+    right: -16px;
+    border-width: 8px 0 8px 16px;
+    border-color: transparent transparent transparent $timeline-element-background-color;
+  }
+
+  .timeline ul li::after {
+    // background: #fff;
+    transition: background-color .5s ease-in-out;
+  }
+   
+  .timeline ul li.in-view::after {
+    // background: $timeline-element-background-color;
+  }
+   
+  .timeline ul li div {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+  }
+   
+  .timeline ul li:nth-child(odd) div {
+    transform: translate3d(200px,0,0);
+    border-bottom-right-radius: 35px;
+    border-top-right-radius: 15px;
+  }
+   
+  .timeline ul li:nth-child(even) div {
+    transform: translate3d(-200px,0,0);
+    border-bottom-left-radius: 35px;
+    border-top-left-radius: 15px;
+  }
+   
+  .timeline ul li.in-view div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 900px) {
+    .timeline ul li div {
+      width: 250px;
+    }
+    .timeline ul li:nth-child(even) div {
+      left: -310px; /*250+45-6*/
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .timeline ul li {
+      margin-left: 20px;
+    }
+     
+    .timeline ul li div {
+      width: calc(100vw - 180px);
+    }
+     
+    .timeline ul li:nth-child(even) div {
+      left: 45px;
+      border-bottom-right-radius: 35px;
+      border-top-right-radius: 15px;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+     
+    .timeline ul li:nth-child(even) div::before {
+      left: -16px;
+      border-width: 8px 16px 8px 0;
+      border-color: transparent $timeline-element-background-color transparent transparent;
+    }
+  }

@@ -1,0 +1,78 @@
+.dog-images {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;  
+}
+
+.dog-image {
+  height: 200px;
+  width: 200px;
+  max-height: 200px;
+  max-width: 200px;
+  position: relative;
+}
+
+@keyframes changewidth {
+  from {
+    font-size: 150%;
+  }
+
+  to {
+    font-size: 100%;
+  }
+}
+
+#placeholder-dog {  
+  margin-left: auto;
+  margin-right: auto;
+  left: 20%;
+  top: 40%;
+  position: absolute;
+  opacity: 1; 
+  transition: opacity 1s;
+  animation-duration: .5s;
+  animation-name: changewidth;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#placeholder-dog.fade {
+  opacity: 0;  
+}
+
+#madog {
+  opacity: 1;  
+  border-radius: 25px 5px 5px 5px;
+  box-shadow: 9px 9px 47px -4px gray;
+  box-shadow: 2px gray;
+  transform: scale(1, 1) rotate(0);  
+  transition: transform 0.5s ease, opacity .8s;
+}
+
+
+#madog.fade {
+  opacity: 0;  
+}
+
+#madog:hover {
+  transform: scale(1.5, 1.5) rotate(15deg);  
+  transition: transform 0.5s ease;
+}
+
+.random-button {
+  border: none;
+  background-color: $background-color;
+  font-size: 2em;  
+  outline: none;
+  cursor: pointer;
+}
+
+.rainbow:hover {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: all .5s ease-in-out;
+}

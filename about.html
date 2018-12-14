@@ -1,0 +1,134 @@
+---
+layout: default
+title: About me
+ref: about
+lang: en
+custom_css: about
+---
+
+<section class="about-container">
+    <img src="/assets/myself.gif" class="my-photo"/>
+    <h1 style="text-align: center;">"El Perro" 🐶</h1>
+    <p>My name is <b>David Ojeda López</b>, but people call me <b>El Perro</b> (don't be shy). I currently live in Zapopan, Jalisco, México and work at <a href="https://www.handy.la" target="_blank">Handy</a>.</p>
+    <p>I'm a web developer, mainly on the back-end of things. I also specialize myself on DevOps based on <span class="amazon-orange"><b>Amazon Web Services (AWS)</b></span>. I'm always learning new stuff, specially related to new AWS services and features.</p>
+    <p>On the back-end side I work with Grails and micro-services on Node. On the front-side I've used the usual HTML, CSS, SASS and JS, but combined with Webpack, AWS S3 and AWS CloudFront. I also know a thing or two about ES6.</p>
+    <p>Outside the developer's world, I'm an <b>Overwatch</b> amateur player (mid/high diamond). My BattleTag is <b>#MEXshredder:2830</b>, in case you want to have some fun.</p>
+    <p>I ran a<b>half-marathon</b> once, but now I only run 5km races and lift weights at the gym.</p>
+    <p>I'm available for any programming or professional guidance inquiries. I may not have the largest nor greatest experience on the field, but I'll do my best to help.</p>
+    <p>Here is a doggish timeline of some things I've done the past few years. Click on each entry to know more!</p>
+    <h1 style="text-align: center;">🐶's Timeline</h1>
+</section>
+
+<section class="timeline">
+    <ul>        
+        <li></li>
+        <li>
+            <div>
+                <time>December, 7th, 2018</time>
+                Finished my first freelance project
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>November, 27th, 2018</time>
+                AWS Certified
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>November, 25th, 2018</time>
+                AWS re:Invent
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>December, 3rd, 2017</time>
+                Ran first half-marathon
+            </div>        
+        </li>        
+        <li>
+            <div>
+                <time>October, 29th, 2017</time>
+                Finished Overwatch season 6 on Master´s
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>April, 2017</time>
+                Decided to start training for half marathon
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>January, 2017</time>
+                Finished AWS migration on Handy
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>July, 26th, 2016</time>
+                Jeff Atwood liked a tweet of mine
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>May, 9th, 2016</time>
+                Started at Handy
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>February, 9th, 2016</time>
+                Finished Udacity´s Full Stack Web Developer nanodegree
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>April 2015 - May 2016</time>
+                Working at Intel on NVMe memory
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>May, 2015</time>
+                Finished college!
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>January - July 2014</time>
+                Studied Biomedical Engineering MSc courses abroad at Linköping University, Sweden
+            </div>
+        </li>
+        <li>
+            
+        </li>
+    </ul>
+</section>
+
+<script>
+    function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    var items = document.querySelectorAll(".timeline li");
+ 
+    // code for the isElementInViewport function  
+    function callbackFunc() {
+    for (var i = 0; i < items.length; i++) {
+        if (isElementInViewport(items[i])) {
+        items[i].classList.add("in-view");
+        }
+    }
+    }
+    
+    window.addEventListener("load", callbackFunc);
+    document.getElementsByClassName('timeline')[0].addEventListener("scroll", callbackFunc);
+    window.addEventListener("scroll", callbackFunc);
+</script>

@@ -31,6 +31,12 @@
                         {% include icon-devto.html username=site.devto_username %}
                     </li>
                     {% endif %}
+
+                    {% if site.goodreads_username %}
+                    <li>
+                        {% include icon-goodreads.html username=site.goodreads_username %}
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
 

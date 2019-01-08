@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: default
 title: About me
 ref: about
@@ -30,74 +30,80 @@ custom_css: about
         </li>
         <li>
             <div>
-                <time>November, 27th, 2018</time>
-                AWS Certified
+                <time datetime="2018-11-27">November 27<sup>th</sup>, 2018</time> - <span class="timeline-element-title">Got my AWS Solutions Architect Associate certification</span>
+                <p class="timeline-element-description">I passed my first AWS cerfication exam during re:Invent! Here it is:</p>
+                <a href="https://s3.amazonaws.com/david-ojeda/AWS+Certified+Solutions+Architect+-+Associate+certificate.pdf" target="_blank">
+                    <img class="timeline-element-image" src="/assets/about/aws-certification.png" width="200" alt="">
+                </a>                
             </div>
         </li>
         <li>
             <div>
-                <time>November, 25th, 2018</time>
-                AWS re:Invent
+                <time datetime="2018-11-25">November 25<sup>th</sup>, 2018</time> - <span class="timeline-element-title">Attended AWS re:Invent</span>
+                <p class="timeline-element-description">First time at re:Invent and Las Vegas. Was a blast!</p>                                
+                <img src="/assets/about/las-vegas.jpg" width="200" alt="" class="timeline-element-image">
             </div>
         </li>
         <li>
             <div>
-                <time>December, 3rd, 2017</time>
-                Ran first half-marathon
+                <time datetime="2017-12-03">December 3<sup>rd</sup>, 2017</time> - <span class="timeline-element-title">Ran first half-marathon</span>
+                <p class="timeline-element-description">Marathon took place in Mazatlán, Sinaloa- I went for the half-marathon</p>
+                <img class="timeline-element-image" src="/assets/about/marathon.jpg" width="200" alt="">
+                
             </div>        
         </li>        
         <li>
             <div>
-                <time>October, 29th, 2017</time>
-                Finished Overwatch season 6 on Master´s
+                <time datetime="2017-10-29">October 29<sup>th</sup>, 2017</time> - <span class="timeline-element-title">Finished Overwatch season 6 on Master´s</span>
+                <p class="timeline-element-description"></p>                
             </div>
         </li>
         <li>
             <div>
-                <time>April, 2017</time>
-                Decided to start training for half marathon
+                <time datetime="2017-04">April, 2017</time> - <span class="timeline-element-title">Decided to start training for half marathon</span>
+                <p class="timeline-element-description"></p>
             </div>
         </li>
         <li>
             <div>
-                <time>January, 2017</time>
-                Finished AWS migration on Handy
+                <time datetime="2017-01">January, 2017</time> - <span class="timeline-element-title">Finished AWS migration on Handy</span>
+                <p class="timeline-element-description"></p>                
             </div>
         </li>
         <li>
             <div>
-                <time>July, 26th, 2016</time>
-                Jeff Atwood liked a tweet of mine
+                <time datetime="2016-07-26">July 26<sup>th</sup>, 2016</time> - <span class="timeline-element-title">Jeff Atwood liked a tweet of mine</span>
+                <p class="timeline-element-description">Reads silly, but felt nice!</p>
             </div>
         </li>
         <li>
             <div>
-                <time>May, 9th, 2016</time>
-                Started at Handy
+                <time datetime="2016-05-09">May 9<sup>th</sup>, 2016</time> - <span class="timeline-element-title">Started at Handy</span>
+                <p class="timeline-element-description"></p>
             </div>
         </li>
         <li>
             <div>
-                <time>February, 9th, 2016</time>
-                Finished Udacity´s Full Stack Web Developer nanodegree
+                <time datetime="2016-02-09">February 9, 2016</time> - <span class="timeline-element-title">Finished Udacity´s Full Stack Web Developer nanodegree</span>
+                <p class="timeline-element-description"></p>           
             </div>
         </li>
         <li>
             <div>
-                <time>April 2015 - May 2016</time>
-                Working at Intel on NVMe memory
+                <time datetime="2015-04">April 2015</time> - <time datetime="2016-05">May 2016</time> - <span class="timeline-element-title">Working at Intel on NVMe memory</span>
+                <p class="timeline-element-description"></p>
             </div>
         </li>
         <li>
             <div>
-                <time>May, 2015</time>
-                Finished college!
+                <time datetime="2015-05">May, 2015</time> - <span class="timeline-element-title">Finished college!</span>
+                <p class="timeline-element-description"></p>
             </div>
         </li>
         <li>
             <div>
-                <time>January - July 2014</time>
-                Studied Biomedical Engineering MSc courses abroad at Linköping University, Sweden
+                <time datetime="2014-01">January</time> - <time datetime="2014-07">July 2014</time> - <span class="timeline-element-title">Studied Biomedical Engineering MSc courses abroad at Linköping University, Sweden</span>
+                <p class="timeline-element-description"></p>                
             </div>
         </li>
         <li>
@@ -105,6 +111,10 @@ custom_css: about
         </li>
     </ul>
 </section>
+
+<style>
+    
+</style>
 
 <script>
     function isElementInViewport(el) {
@@ -121,14 +131,32 @@ custom_css: about
  
     // code for the isElementInViewport function  
     function callbackFunc() {
-    for (var i = 0; i < items.length; i++) {
-        if (isElementInViewport(items[i])) {
-        items[i].classList.add("in-view");
+        for (var i = 0; i < items.length; i++) {
+            if (isElementInViewport(items[i])) {
+                items[i].classList.add("in-view");
+            }
         }
     }
+
+    let divs = document.querySelectorAll('.timeline li div')    
+    for(let div of divs) {
+        div.addEventListener('click', function(event){  
+            if(!this.classList.contains('selected')) {
+                console.info(this);
+                this.classList.add('selected');
+                this.querySelector('.timeline-element-image').classList.toggle('fade');
+                this.querySelector('.timeline-element-description').classList.toggle('fade');
+            } else {
+                this.classList.remove('selected');
+                this.querySelector('.timeline-element-image').classList.toggle('fade');
+                this.querySelector('.timeline-element-description').classList.toggle('fade');
+            }                                    
+        });
     }
     
     window.addEventListener("load", callbackFunc);
     document.getElementsByClassName('timeline')[0].addEventListener("scroll", callbackFunc);
     window.addEventListener("scroll", callbackFunc);
-</script>
+
+
+</script> -->

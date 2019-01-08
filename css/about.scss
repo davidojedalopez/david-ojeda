@@ -2,10 +2,10 @@
 ---
 @charset "utf-8";
 
-$timeline-element-background-color: rgba(172, 104, 9, .8);
+$timeline-element-background-color: #595754;
 
 .about-container {
-
+  margin-top: 40px;
 }
 
 .my-photo {
@@ -76,6 +76,11 @@ $timeline-element-background-color: rgba(172, 104, 9, .8);
     width: 370px;
     padding: 12px;
     background: $timeline-element-background-color;
+    height: 60px;
+    transition: height 1s ease-in-out;
+    &.selected {                
+      height: 350px;
+    }    
   }
    
   .timeline ul li div::before {
@@ -124,14 +129,14 @@ $timeline-element-background-color: rgba(172, 104, 9, .8);
    
   .timeline ul li:nth-child(odd) div {
     transform: translate3d(200px,0,0);
-    border-bottom-right-radius: 35px;
-    border-top-right-radius: 15px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
   }
    
   .timeline ul li:nth-child(even) div {
     transform: translate3d(-200px,0,0);
-    border-bottom-left-radius: 35px;
-    border-top-left-radius: 15px;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
   }
    
   .timeline ul li.in-view div {
@@ -160,8 +165,8 @@ $timeline-element-background-color: rgba(172, 104, 9, .8);
      
     .timeline ul li:nth-child(even) div {
       left: 45px;
-      border-bottom-right-radius: 35px;
-      border-top-right-radius: 15px;
+      border-bottom-right-radius: 25px;
+      border-top-right-radius: 25px;
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
     }
@@ -172,3 +177,37 @@ $timeline-element-background-color: rgba(172, 104, 9, .8);
       border-color: transparent $timeline-element-background-color transparent transparent;
     }
   }
+
+  .timeline {
+    time {
+      cursor: pointer;
+    }
+    .timeline-element-title {
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .timeline-element-description {
+      padding-top: 15px;
+      opacity: 0;
+      transition: all .2s ease;
+      &.fade {
+        opacity: 1;
+        transition: all .7s ease-in;
+      }
+    }
+    .timeline-element-image {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      opacity: 0;
+      transition: all .2s ease;
+      // box-shadow: 0 0 15px 7px white;
+      border-radius: 7px;
+      &.fade {
+        opacity: 1;
+        transition: all .7s ease-in;
+      }
+    }
+  }
+  
+

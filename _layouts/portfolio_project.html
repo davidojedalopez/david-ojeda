@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% if jekyll.environment == 'production' %}
+        {% include analytics.html %}
+    {% endif %}
+    {% include portfolio_project_head.html %}
+
+</head>
+
+    <body>                      
+        {{ content }}      
+    </body>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>

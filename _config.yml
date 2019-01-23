@@ -16,3 +16,7 @@ future: true
 plugins:
   - jekyll-gist
   - jekyll-sitemap
+collections:
+  portfolio:
+    output: true
+collections_dir: collections    

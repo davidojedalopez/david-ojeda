@@ -1,0 +1,26 @@
+<!-- ---
+layout: default
+title: Portfoio 💼
+ref: portfolio
+lang: en
+---
+
+<h1>Portfolio</h1>
+
+{% assign projects = site.portfolio | where: 'lang', page.lang %}
+<section class="projects">
+    {% for project in projects %}
+    {{page.collection}}    
+    <a href="{{project.url}}" target="_blank">
+      <img src="{{project.thumbnail}}" alt="{{project.title}} thumbnail" />
+    </a>
+  {% endfor %}  
+</section>
+
+<style>
+  .projects {
+    display: grid;
+    grid-gap: 15px;    
+    grid-template-columns: 33.3fr 33.3fr 33.3fr;
+  }
+</style> -->

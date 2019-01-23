@@ -19,5 +19,5 @@ There are tons of things I need to learn and deeply understand, and I think teac
 I will be updating this post whenever I create a new post for the series.
 
 - **IAM**
-  - [Pt. 1 - The Basics]({{ site.baseurl }}{% post_url 2018-07-30-aws-iam-pt1-the-basics %})
+  - [Pt. 1 - The Basics]({{ site.baseurl }}{% post_url 2018-07-30-aws-iam-pt1-the-basics %})  
   - [Pt. 2 - A practical example]({{ site.baseurl }}{% post_url 2018-07-30-aws-iam-pt2-a-practical-example %})

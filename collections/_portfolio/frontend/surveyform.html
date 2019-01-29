@@ -1,0 +1,88 @@
+---
+layout: portfolio_project
+title: Survey form
+ref: survey
+lang: en
+thumbnail: /assets/myself.gif
+custom_css: survey_form
+<!-- custom_js: overwatch_tribute -->
+---
+
+<section>
+    <h1 id="title">Coding resources</h1>      
+    <p id="description">Let me know what are you most interested in!</p>
+</section>
+
+<form id="survey-form">  
+  <section class="required-fields">
+      <label for="name" id="name-label">Name<sup>*</sup></label>            
+      <input type="text" id="name" required placeholder="David Ojeda">
+
+      <label for="email" id="email-label">Email<sup>*</sup></label>
+      <input type="email" id="email" required placeholder="david.ojeda.lopez@gmail.com">
+
+      <label for="number" id="number-label">Age<sup>*</sup></label>            
+      <input type="number" min="0" max="10" id="number" placeholder="5">
+  </section>
+
+  <section>
+      <label for="dropdown">Are you currently working part or full-time on a software development related field?</label>
+      <select name="dropdown" id="dropdown">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+  </section>
+  
+  <section>
+      <fieldset>
+          <legend>What are you most interesed in?</legend>
+               
+          <input type="radio" name="stack" value="fullstack" id="fullstack">
+          <label for="fullstack">Fullstack</label>   
+          
+          <input type="radio" name="stack" value="frontend" id="frontend">
+          <label for="frontend">Frontend</label>
+        
+          <input type="radio" name="stack" value="backend" id="backend">
+          <label for="backend">Backend</label>
+        </fieldset>
+  </section>
+      
+  <section>
+      <fieldset>
+          <legend>Which of these resources are you looking for?</legend>
+
+          <input type="checkbox" name="resource" value="general" id="general">
+          <label for="general">General Computer Science concepts</label><br>
+
+          <input type="checkbox" name="resource" value="intro" id="intro">
+          <label for="intro">Introductory material to specific language</label><br>
+
+          <input type="checkbox" name="resource" value="advanced" id="advanced">
+          <label for="advanced">Advanced material to specific language</label><br>
+
+          <input type="checkbox" name="resource" value="specific" id="specific">
+          <label for="specific">Specific framework guides</label><br>
+          
+          <input type="checkbox" name="resource" value="comparison" id="comparison">
+          <label for="comparison">Stack comparisons</label><br>
+
+          <input type="checkbox" name="resource" value="productivity" id="productivity">
+          <label for="productivity">Productivity tips</label><br>
+
+          <input type="checkbox" name="resource" value="problem-solving" id="problem-solving">
+          <label for="problem-solving">Problem solving techniques/suggestions</label><br>
+
+          <input type="checkbox" name="resource" value="communication" id="communication">
+          <label for="communication">Communication skills</label><br>
+      </fieldset>
+  </section>
+
+  <section class="comments">
+      <label for="comments">Anything else you would like to learn?</label><br>   
+      <textarea name="comments" id="comments" cols="50" rows="5" placeholder="Would love to hear from you!"></textarea><br>    
+      <button type="submit" id="submit">Submit</button>
+  </section>
+    
+</form>
+

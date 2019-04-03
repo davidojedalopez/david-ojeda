@@ -6,7 +6,11 @@ lang: en
 custom_css: about
 ---
 
-<h1>Welcome! 👋🏼 Here is a random picture of a dog:</h1>
+<section class="main-title">
+        <h1>Welcome! 👋🏼</h1>
+        <h2>Here is a random picture of a dog:</h2>
+</section>
+
 
 <section class="dog-images">
     <form>
@@ -16,7 +20,7 @@ custom_css: about
     </form>
     
     <div class="dog-image">
-        <img id="madog" class="" src="" width="" alt="">
+        <img id="madog" class="" src="" width="" alt="" />
         <span id="placeholder-dog" class="fade">🐶 &nbsp;&nbsp; 🐕 &nbsp;&nbsp; 🐩</span>
     </div>
 
@@ -25,24 +29,26 @@ custom_css: about
     </button>
 </section>
 
-<h2>A little about me:</h2>
 <section class="about-container">
-    <img src="/assets/myself.gif" class="my-photo"/>
 
-    <p>My name is <b>David Ojeda López</b>, but people call me <b>Perro</b> or <b>Dog</b> (don't be shy). I currently live in Zapopan, Jalisco, México and work at <a href="https://www.handy.la" target="_blank">Handy</a>.</p>
+    <h2>A little about me...</h2>
+    <img src="/assets/myself.gif" class="my-photo"/>        
+    
+    <p>My name is <strong>David Ojeda López</strong>, but people call me <strong>Perro</strong> or <strong>Dog</strong> (don't be shy). I currently live in Zapopan, Jalisco, México and work at <a href="https://www.handy.la" target="_blank">Handy</a>.</p>
 
-    <p>I'm a web developer, mainly on the back-end of things. I also specialize myself on DevOps using <span class="amazon-orange"><b>Amazon Web Services (AWS)</b></span>. I'm always learning new stuff, specially related to new AWS services and features. Here to know more about my skills. </p>
-        
-    <p>Outside the developer's world, I'm an <b>Overwatch</b> amateur player (mid/high diamond). My BattleTag is <b>#MEXshredder:2830</b>, in case you want to have some fun.</p>
+    <p>I'm a web developer, mainly on the back-end of things. I also specialize myself on DevOps using <span class="amazon-orange"><strong>Amazon Web Services (AWS)</strong></span>. I'm always learning new stuff, specially related to new AWS services and features. </p>        
+
+    <p>Outside the developer's world, I'm an <strong>Overwatch</strong> amateur player (high diamond/low masters). My BattleTag is <strong>#MEXshredder2830</strong>, in case you want to have some fun.</p>        
 
     <p>I also enjoy weightlifting and ran half-marathon once. 💪🏼🏃🏻‍♂️</p>
 
     <p>I'm available for any programming or professional guidance inquiries. I may not have the largest nor greatest experience on the field, but I'll do my best to help.</p>
+
     <p>Here is a doggish timeline of some things I've done the past few years. Click on each entry to know more!</p>
-    <p style="text-align: center;">🐶's Timeline</p>
 </section>
 
 <section class="timeline">
+    <p style="text-align: center;">🐶's Timeline</p>
     <ul>        
         <li></li>        
         <li>
@@ -213,6 +219,14 @@ custom_css: about
             }
         }
     }
+
+    let ro = new ResizeObserver( entries => {
+        for (let entry of entries) {        
+            document.querySelector('section.dog-images').style.height = `${entry.contentRect.height + 45}px`;            
+        }        
+    });
+
+    ro.observe(document.getElementById('madog'));
 
 
 </script>

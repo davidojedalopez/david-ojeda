@@ -4,15 +4,33 @@
 
 $timeline-element-background-color: #595754;
 
-.about-container {
-  margin-top: 40px;
+.main-title {
+  text-align: center;
+}
+
+.about-container {  
+  display: block;
+  float: left;
+  h2 {
+    text-align: center;
+  }
+  @media screen and (max-width: 1000px) {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    p {
+      align-self: flex-start;
+    }
+  }
 }
 
 .my-photo {
     float: left;
-    border-radius: 50%;
-    margin-right: 50px;
-    margin-bottom: 50px;
+    border-radius: 50%;  
+    margin: 25px;
+    @media screen and (max-width: 1000px) {    
+      margin-top: 10px;
+    }
 }
 
 .amazon-orange {
@@ -20,6 +38,7 @@ $timeline-element-background-color: #595754;
 }
 
 .timeline {
+    width: 100%;
     height: 450px;
     overflow-y: scroll;
     margin-bottom: 30px;

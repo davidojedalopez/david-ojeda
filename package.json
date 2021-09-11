@@ -6,8 +6,7 @@
   "scripts": {
     "clean": "rimraf _site",
     "serve": "eleventy --serve --watch",
-    "build:eleventy": "eleventy",
-    "build": "run-s clean build:*",
+    "build": "npm run clean && eleventy",
     "debug": "DEBUG=* eleventy"
   },
   "repository": {

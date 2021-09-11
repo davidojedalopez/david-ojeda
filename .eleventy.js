@@ -60,6 +60,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('humans.txt')
     eleventyConfig.addPassthroughCopy('manifest.json')
     eleventyConfig.addPassthroughCopy('.well-known')
+    eleventyConfig.addPassthroughCopy('cv.pdf')
 
     // Browsersync Overrides
     eleventyConfig.setBrowserSyncConfig({

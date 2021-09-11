@@ -92,13 +92,20 @@
         title="{{ metadata.title }}">
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.15/dist/base.css" />
     <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/typography@0.4.x/dist/typography.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://unpkg.com/">
     <style>
+        @font-face {
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 400;
+            src: local(''),
+                url('fonts/rubik-v14-latin-regular.woff2') format('woff2'),
+                url('fonts/rubik-v14-latin-regular.woff') format('woff');
+        }
+
         body {
             margin: 2rem;
-            font-family: 'Rubik', sans-serif;
+            font-family: 'Rubik'
         }
     </style>
 </head>

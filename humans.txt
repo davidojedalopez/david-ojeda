@@ -1,0 +1,10 @@
+/* TEAM */
+	Owner, author, developer, designer: David Ojeda
+	Twitter: @PerroDinero
+	From: Pericos, Sinaloa, México
+
+/* SITE */
+	Language: English
+	Doctype: HTML5
+	IDE: Visual Studio Code
+    Stack: 11ty and Netlify

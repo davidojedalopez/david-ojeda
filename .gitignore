@@ -1,3 +1,12 @@
 _site/
-.idea/
-.DS_store
+node_modules/
+package-lock.json
+credentials.json
+.env
+token.json
+.DS_Store
+
+# Local Netlify folder
+.netlify
+
+.idea/*

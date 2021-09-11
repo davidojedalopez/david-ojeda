@@ -1,233 +1,206 @@
----
-layout: default
-title: Home 🏡
-ref: index
-lang: en
-custom_css: about
----
+<!DOCTYPE html>
+<html lang="en">
 
-<section class="main-title">
-        <h1>Welcome! 👋🏼</h1>
-        <h2>Here is a random picture of a dog:</h2>
-</section>
+<head>
+    <title>David Ojeda</title>
 
+    <meta name="title" content="{{ metadata.title }}">
+    <meta name="description" content="{{ metadata.description }}">
+    <meta name="author" content="{{ metadata.author.name }}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<section class="dog-images">
-    <form>
-        <label for="dog-breed">Select a breed:</label>
-        
-        <select id="dog-breed"><option value="affenpinscher">affenpinscher</option><option value="african">african</option><option value="airedale">airedale</option><option value="akita">akita</option><option value="appenzeller">appenzeller</option><option value="basenji">basenji</option><option value="beagle">beagle</option><option value="bluetick">bluetick</option><option value="borzoi">borzoi</option><option value="bouvier">bouvier</option><option value="boxer">boxer</option><option value="brabancon">brabancon</option><option value="briard">briard</option><option value="bulldog-boston">boston bulldog</option><option value="bulldog-french">french bulldog</option><option value="bullterrier-staffordshire">staffordshire bullterrier</option><option value="cairn">cairn</option><option value="cattledog-australian">australian cattledog</option><option value="chihuahua">chihuahua</option><option value="chow">chow</option><option value="clumber">clumber</option><option value="cockapoo">cockapoo</option><option value="collie-border">border collie</option><option value="coonhound">coonhound</option><option value="corgi-cardigan">cardigan corgi</option><option value="cotondetulear">cotondetulear</option><option value="dachshund">dachshund</option><option value="dalmatian">dalmatian</option><option value="dane-great">great dane</option><option value="deerhound-scottish">scottish deerhound</option><option value="dhole">dhole</option><option value="dingo">dingo</option><option value="doberman">doberman</option><option value="elkhound-norwegian">norwegian elkhound</option><option value="entlebucher">entlebucher</option><option value="eskimo">eskimo</option><option value="frise-bichon">bichon frise</option><option value="germanshepherd">germanshepherd</option><option value="greyhound-italian">italian greyhound</option><option value="groenendael">groenendael</option><option value="hound-afghan">afghan hound</option><option value="hound-basset">basset hound</option><option value="hound-blood">blood hound</option><option value="hound-english">english hound</option><option value="hound-ibizan">ibizan hound</option><option value="hound-walker">walker hound</option><option value="husky">husky</option><option value="keeshond">keeshond</option><option value="kelpie">kelpie</option><option value="komondor">komondor</option><option value="kuvasz">kuvasz</option><option value="labrador">labrador</option><option value="leonberg">leonberg</option><option value="lhasa">lhasa</option><option value="malamute">malamute</option><option value="malinois">malinois</option><option value="maltese">maltese</option><option value="mastiff-bull">bull mastiff</option><option value="mastiff-tibetan">tibetan mastiff</option><option value="mexicanhairless">mexicanhairless</option><option value="mix">mix</option><option value="mountain-bernese">bernese mountain</option><option value="mountain-swiss">swiss mountain</option><option value="newfoundland">newfoundland</option><option value="otterhound">otterhound</option><option value="papillon">papillon</option><option value="pekinese">pekinese</option><option value="pembroke">pembroke</option><option value="pinscher-miniature">miniature pinscher</option><option value="pointer-german">german pointer</option><option value="pointer-germanlonghair">germanlonghair pointer</option><option value="pomeranian">pomeranian</option><option value="poodle-miniature">miniature poodle</option><option value="poodle-standard">standard poodle</option><option value="poodle-toy">toy poodle</option><option value="pug">pug</option><option value="puggle">puggle</option><option value="pyrenees">pyrenees</option><option value="redbone">redbone</option><option value="retriever-chesapeake">chesapeake retriever</option><option value="retriever-curly">curly retriever</option><option value="retriever-flatcoated">flatcoated retriever</option><option value="retriever-golden">golden retriever</option><option value="ridgeback-rhodesian">rhodesian ridgeback</option><option value="rottweiler">rottweiler</option><option value="saluki">saluki</option><option value="samoyed">samoyed</option><option value="schipperke">schipperke</option><option value="schnauzer-giant">giant schnauzer</option><option value="schnauzer-miniature">miniature schnauzer</option><option value="setter-english">english setter</option><option value="setter-gordon">gordon setter</option><option value="setter-irish">irish setter</option><option value="sheepdog-english">english sheepdog</option><option value="sheepdog-shetland">shetland sheepdog</option><option value="shiba">shiba</option><option value="shihtzu">shihtzu</option><option value="spaniel-blenheim">blenheim spaniel</option><option value="spaniel-brittany">brittany spaniel</option><option value="spaniel-cocker">cocker spaniel</option><option value="spaniel-irish">irish spaniel</option><option value="spaniel-japanese">japanese spaniel</option><option value="spaniel-sussex">sussex spaniel</option><option value="spaniel-welsh">welsh spaniel</option><option value="springer-english">english springer</option><option value="stbernard">stbernard</option><option value="terrier-american">american terrier</option><option value="terrier-australian">australian terrier</option><option value="terrier-bedlington">bedlington terrier</option><option value="terrier-border">border terrier</option><option value="terrier-dandie">dandie terrier</option><option value="terrier-fox">fox terrier</option><option value="terrier-irish">irish terrier</option><option value="terrier-kerryblue">kerryblue terrier</option><option value="terrier-lakeland">lakeland terrier</option><option value="terrier-norfolk">norfolk terrier</option><option value="terrier-norwich">norwich terrier</option><option value="terrier-patterdale">patterdale terrier</option><option value="terrier-russell">russell terrier</option><option value="terrier-scottish">scottish terrier</option><option value="terrier-sealyham">sealyham terrier</option><option value="terrier-silky">silky terrier</option><option value="terrier-tibetan">tibetan terrier</option><option value="terrier-toy">toy terrier</option><option value="terrier-westhighland">westhighland terrier</option><option value="terrier-wheaten">wheaten terrier</option><option value="terrier-yorkshire">yorkshire terrier</option><option value="vizsla">vizsla</option><option value="weimaraner">weimaraner</option><option value="whippet">whippet</option><option value="wolfhound-irish">irish wolfhound</option></select>
-    </form>
-    
-    <div class="dog-image">
-        <img id="madog" class="" src="" width="" alt="" />
-        <span id="placeholder-dog" class="fade">🐶 &nbsp;&nbsp; 🐕 &nbsp;&nbsp; 🐩</span>
-    </div>
+    <link type="text/plain" rel="author" href="/humans.txt" />
 
-    <button class="random-button" onclick="changeImage()">
-        <span class="rainbow">More<br>dogs<br>please!</span>
-    </button>
-</section>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
+    <meta property="og:title" content="{{ renderData.title or title or metadata.title }}">
+    <meta property="og:description" content="{{ renderData.description or description or metadata.description }}">
+    <meta property="og:image" content="{{ metadata.url }}/{{ metadata.cover }}">
 
-<section class="about-container">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ metadata.url }}{{ page.url }}">
+    <meta property="twitter:title" content="{{ renderData.title or title or metadata.title }}">
+    <meta property="twitter:description" content="{{ renderData.description or description or metadata.description }}">
+    <meta property="twitter:image" content="{{ metadata.url }}/{{ metadata.cover }}">
 
-    <h2>A little about me...</h2>
-    <img src="/assets/myself.gif" class="my-photo"/>        
-    
-    <p>My name is <strong>David Ojeda López</strong>, but people call me <strong>Perro</strong> or <strong>Dog</strong> (don't be shy). I currently live in Zapopan, Jalisco, México and work at <a href="https://www.handy.la" target="_blank">Handy</a>.</p>
+    <meta name="twitter:site" content="@PerroDinero">
+    <meta name="twitter:creator" content="@PerroDinero">
 
-    <p>I'm a web developer, mainly on the back-end of things. I also specialize myself on DevOps using <span class="amazon-orange"><strong>Amazon Web Services (AWS)</strong></span>. I'm always learning new stuff, specially related to new AWS services and features. </p>        
+    <!-- <meta name="theme-color" content="#F3CA3E"> -->
 
-    <p>Outside the developer's world, I'm an <strong>Overwatch</strong> amateur player (high diamond/low masters). My BattleTag is <strong>#MEXshredder2830</strong>, in case you want to have some fun.</p>        
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/img/favicon/favicon-32x32.png' | url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/img/favicon/favicon-16x16.png' | url }}">
+    <link rel="apple-touch-icon" href="{{ '/img/favicon/manifest-icon-192.png' | url }}" sizes="192x192">
+    <link rel="apple-touch-icon" href="{{ '/img/favicon/manifest-icon-512.png' | url }}" sizes="512x512">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-2048-2732.jpg' | url }}"
+        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-2732-2048.jpg' | url }}"
+        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-1668-2388.jpg' | url }}"
+        media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-2388-1668.jpg' | url }}"
+        media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-1536-2048.jpg' | url }}"
+        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-2048-1536.jpg' | url }}"
+        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-1668-2224.jpg' | url }}"
+        media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-2224-1668.jpg' | url }}"
+        media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-1620-2160.jpg' | url }}"
+        media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-2160-1620.jpg' | url }}"
+        media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-1284-2778.jpg' | url }}"
+        media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-2778-1284.jpg' | url }}"
+        media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-1170-2532.jpg' | url }}"
+        media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-2532-1170.jpg' | url }}"
+        media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-1125-2436.jpg' | url }}"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-2436-1125.jpg' | url }}"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-1242-2688.jpg' | url }}"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-2688-1242.jpg' | url }}"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-828-1792.jpg' | url }}"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-1792-828.jpg' | url }}"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-1242-2208.jpg' | url }}"
+        media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-2208-1242.jpg' | url }}"
+        media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-750-1334.jpg' | url }}"
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-1334-750.jpg' | url }}"
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-640-1136.jpg' | url }}"
+        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="{{ '/img/favicon/apple-splash-1136-640.jpg' | url }}"
+        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
 
-    <p>I also enjoy weightlifting and ran half-marathon once. 💪🏼🏃🏻‍♂️</p>
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
-    <p>I'm available for any programming or professional guidance inquiries. I may not have the largest nor greatest experience on the field, but I'll do my best to help.</p>
-
-    <p>Here is a doggish timeline of some things I've done the past few years. Click on each entry to know more!</p>
-</section>
-
-<section class="timeline">
-    <p style="text-align: center;">🐶's Timeline</p>
-    <ul>        
-        <li></li>        
-        <li>
-            <div>
-                <time datetime="2018-11-27">November 27<sup>th</sup>, 2018</time> - <span class="timeline-element-title">Got AWS certified!</span>
-                <p class="timeline-element-description">Passed my AWS Solutions Architect - Associate cerfication exam during re:Invent! Here it is:</p>
-                <a href="https://s3.amazonaws.com/david-ojeda/AWS+Certified+Solutions+Architect+-+Associate+certificate.pdf" target="_blank">
-                    <img class="timeline-element-image" src="/assets/about/aws-certification.png" width="200" alt="AWS Certification document">
-                </a>                
-            </div>
-        </li>
-        <li>
-            <div>
-                <time datetime="2018-11-25">November 25<sup>th</sup>, 2018</time> - <span class="timeline-element-title">Attended AWS re:Invent</span>
-                <p class="timeline-element-description">First time at re:Invent and Las Vegas. Was a blast!</p>
-                <img src="/assets/about/las-vegas.jpg" width="200" alt="Photo of Las Vegas" class="timeline-element-image">
-            </div>
-        </li>
-        <li>
-            <div>
-                <time datetime="2017-12-03">December 3<sup>rd</sup>, 2017</time> - <span class="timeline-element-title">Ran first half-marathon</span>
-                <p class="timeline-element-description">Marathon took place in Mazatlán, Sinaloa- I went for the half-marathon.</p>
-                <img class="timeline-element-image" src="/assets/about/marathon.jpg" width="200" alt="Myself holding a medal">
-            </div>        
-        </li>        
-        <li>
-            <div>
-                <time datetime="2017-10-29">October 29<sup>th</sup>, 2017</time> - <span class="timeline-element-title">Reached Masters on Overwatch</span>
-                <p class="timeline-element-description">Got there with Junkrat as main. 💣</p>            
-                <img class="timeline-element-image" src="/assets/about/overwatch.png" width="200" alt="">                        
-            </div>
-        </li>
-        <li>
-            <div>
-                <time datetime="2017-04">April, 2017</time> - <span class="timeline-element-title">Decided to start training for half marathon.</span>            
-                <p class="timeline-element-description">Used an app called Couch to 5K, and it worked great!</p>
-                <a href="https://www.active.com/mobile/couch-to-5k-app" target="_blank"></a>
-                    <img class="timeline-element-image" src="/assets/about/5k.png" width="200" alt="Logo of Couch to 5K app">
-                </a>
-            </div>
-        </li>
-        <li>
-            <div>
-                <time datetime="2017-01">January, 2017</time> - <span class="timeline-element-title">Finished AWS migration on Handy</span>
-                <p class="timeline-element-description">After some months of work and tons of learning I finished migrating our infastructure from Rackspace to AWS. 🏗</p>
-                <img class="timeline-element-image" src="/assets/about/aws.png" width="200" alt="AWS logo">
-            </div>
-        </li>
-        <li>
-            <div>
-                <time datetime="2016-07-26">July 26<sup>th</sup>, 2016</time> - <span class="timeline-element-title">Jeff Atwood liked a tweet of mine</span>
-                <p class="timeline-element-description">Seems silly, but worth mentioning! This is the page hosted on GitHub Pages by the way. 📄</p>
-                <img class="timeline-element-image" src="/assets/about/tweet.jpg" width="200" alt="Jeff Atwood liked my tweet">
-            </div>
-        </li>
-        <li>
-            <div>
-                <time datetime="2016-05-09">May 9<sup>th</sup>, 2016</time> - <span class="timeline-element-title">Started working at Handy</span>
-                <p class="timeline-element-description">First and current developer job! 👨🏻‍💻 Right now doing full stack development with Grails and Android, and some DevOps too!</p>
-                <a href="https://www.handy.la/" target="_blank">
-                    <img class="timeline-element-image" src="/assets/about/handy.svg" width="320" alt="Handy's logo">
-                </a>
-            </div>
-        </li>
-        <li>
-            <div>
-                <time datetime="2016-02-09">February 9, 2016</time> - <span class="timeline-element-title">Finished Udacity´s nanodegree</span>
-                <p class="timeline-element-description">My first big-time introduction to web development with the Full Stack Web Developer nanodegree</p>
-                <a href="https://confirm.udacity.com/PT4NCPPQ" target="_blank">
-                    <img class="timeline-element-image" src="/assets/about/udacity.png" width="200" alt="Udacity's Full Stack Web Developer Nanodegree certificate">
-                </a>
-            </div>
-        </li>
-        <li>
-            <div>
-                <time datetime="2015-04">April 2015</time> - <time datetime="2016-05">May 2016</time> - <span class="timeline-element-title">Working at Intel</span>
-                <p class="timeline-element-description">In charge of the electrical validation of Intel's 3D XPoint memory which powers Intel Optane technology</p>
-                <a href="https://www.intel.com/content/www/us/en/architecture-and-technology/intel-optane-technology.html" target="_blank">
-                    <img class="timeline-element-image" src="/assets/about/optane.png" width="200" alt="Intel's Optane memory">
-                </a>
-            </div>
-        </li>
-        <li>
-            <div>
-                <time datetime="2015-05">May, 2015</time> - <span class="timeline-element-title">Finished college!</span>
-                <p class="timeline-element-description">Studied Biomedical Engineering, and it was not until my last year that I started liking programming!</p>
-                <img class="timeline-element-image" src="/assets/about/itesm.png" width="200" alt="Monterrey's Institute of Technology and Higher Education logo">
-            </div>
-        </li>
-        <li>
-            <div>
-                <time datetime="2014-01">January</time> - <time datetime="2014-07">July 2014</time> - <span class="timeline-element-title">Studied abroad!</span>
-                <p class="timeline-element-description">Took some Biomedical Engineering MSc courses abroad at Linköping University, Sweden</p>
-                <img class="timeline-element-image" src="/assets/about/sweden.png" width="200" alt="Linköping's University logo">
-            </div>
-        </li>
-        <li>
-            
-        </li>
-    </ul>
-</section>
-
-<script>
-    var items;
-    (function() {
-        document.addEventListener('DOMContentLoaded', (event) => {
-            changeImage();
-
-            document.getElementById('dog-breed').addEventListener('change', (event) => {
-                let select = event.target;                
-                let breed = select.options[select.selectedIndex].value;
-                let url = `https://dog.ceo/api/breed/${breed}/images/random`;
-                changeImage(url);
-            });
-        });        
-
-        items = document.querySelectorAll(".timeline li");
-        let divs = document.querySelectorAll('.timeline li div')    
-        for(let div of divs) {
-            div.addEventListener('click', function(event){  
-                if(!this.classList.contains('selected')) {                    
-                    this.classList.add('selected');
-                    this.querySelector('.timeline-element-image').classList.toggle('fade');
-                    this.querySelector('.timeline-element-description').classList.toggle('fade');
-                } else {
-                    this.classList.remove('selected');
-                    this.querySelector('.timeline-element-image').classList.toggle('fade');
-                    this.querySelector('.timeline-element-description').classList.toggle('fade');
-                }                                    
-            });
+    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml"
+        title="{{ metadata.title }}">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.15/dist/base.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/typography@0.4.x/dist/typography.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 2rem;
+            font-family: 'Rubik', sans-serif;
         }
-        
-        window.addEventListener("load", callbackFunc);
-        document.getElementsByClassName('timeline')[0].addEventListener("scroll", callbackFunc);
-        window.addEventListener("scroll", callbackFunc);
-    })();  
-    
-    function changeImage(url) {
-        document.getElementById('madog').classList.toggle('fade');
-        document.getElementById('placeholder-dog').classList.toggle('fade');
-        fetch(url || "https://dog.ceo/api/breeds/image/random")
-        .then(response => {
-            return response.json();
-        }).then((data) => {                     
-            document.getElementById('madog').src = data.message;
-            setTimeout(() => {                
-                document.getElementById('madog').classList.toggle('fade');
-                document.getElementById('placeholder-dog').classList.toggle('fade');
-            }, 1000)            
-        });
-    }
+    </style>
+</head>
 
-     function isElementInViewport(el) {
-        var rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
+<body>
+    <article class="prose prose-xl">
+        <h1>Hey, I'm David.</h1>
 
-    // code for the isElementInViewport function  
-    function callbackFunc() {
-        for (var i = 0; i < items.length; i++) {
-            if (isElementInViewport(items[i])) {
-                items[i].classList.add("in-view");
-            }
-        }
-    }
+        <p>Like my site? It's built with top-of-the-spear, cutting-edge, state-of-the-art technology: <strong>HTML and
+                some CSS.</strong></p>
+        <p>No, there's no dark mode and there will not be.</p>
+        <p>Anyway... I guess you're here to know more about me. If not, I recomend you this site with puppy pictures.
+        </p>
 
-    let ro = new ResizeObserver( entries => {
-        for (let entry of entries) {        
-            document.querySelector('section.dog-images').style.height = `${entry.contentRect.height + 45}px`;            
-        }        
-    });
+        <h2>Who am I?</h2>
 
-    ro.observe(document.getElementById('madog'));
+        <p>I'm a mexican guy in my twenties trying my best to succeed in life. Am I doing a good job? I believe so.</p>
 
+        <h3>In terms of work...</h3>
+        <p>I'm a full-stack web developer (yeah, we exist). I love the web and everything that revolves around it.
+            Currently doing back-end work at Nubank, a huge digital bank in Latam.</p>
 
-</script>
+        <a href="">Here's my CV for more details.</a>
 
+        <h3>In terms of hobbies...</h3>
+        <p>I enjoy many, many things:</p>
+        <ul>
+            <li>
+                <p><strong>Training and playing with my dogs.</strong> I have two Border Collies, Nina and Alyx. Having
+                    them and making sure they behave appropiately is a full-time job. And I love it.</p>
+            </li>
+            <li>
+                <p><strong>Writing.</strong> Mainly about personal finance, investments and personal development, but
+                    also about technology and life journaling. I run a <a href="https://perrodinero.blog">personal
+                        finance blog in Spanish named Perro Dinero</a>. Yes, you'll find pictures of my dogs.</p>
+            </li>
+            <li>
+                <p><strong>Reading.</strong> In order to learn and write better, I also need to read a lot. My favorite
+                    genres are sci-fi and personal development. Check my <a
+                        href="https://www.goodreads.com/user/show/10347208-david">Goodreads profile</a> for more
+                    details.</p>
+            </li>
+            <li>
+                <p><strong>Playing videogames.</strong> They have been an important time of my live, and I believe they
+                    will continue to be in the long future.</p>
+            </li>
+            <li>
+                <p><strong>Teaching.</strong> I do so mainly in the form of writing, but also in 1:1 conversations. I
+                    teach and share my knowledge around money and investments to mexican people, and about technology to
+                    anyone who wants it.</p>
+            </li>
+        </ul>
+
+        <h3>My core values...</h3>
+        <p>There are plenty of things that change over time, but my core values are not one of them. These values are
+            what drive all my decisions:</p>
+        <ul>
+            <li>
+                <p><strong>Family.</strong> My family is paramount. If something's gonna harm my relationship with my
+                    family, then I won't do it.</p>
+            </li>
+            <li>
+                <p><strong>Privacy.</strong> I'm against using people's data to drive revenue. That's reflected
+                    throughout my whole lifestyle. I don't support any of Facebook's companies. I don't have Instagram.
+                    I don't use Google Search. I don't use Chrome. I don't use Gmail. It's troublesome and impractical
+                    most of the time? Yes. But that's the path I decided to take, and you can do as you please.
+                </p>
+                <p>There are some conflicts with privacy and family tho. I can't completely leave WhatsApp because
+                    that's where most of my family hangs around; and that's the most used messaging platform used in
+                    Mexico.</p>
+                <p>Oh, by the way, <strong>this site doesn't track you at all</strong>. I don't even know how many
+                    people visit it, and I
+                    don't care.</p>
+            </li>
+            <li>
+                <p><strong>Money.</strong> The amount of money is rarely the driver of my decisions right now. I have a
+                    good insight on how much is enough. So, if I need to trade freedom and flexibility for money, I'll
+                    probably won't do it. If a decision is likely to help me sleep better at night, then I'll take it.
+                </p>
+            </li>
+            <li>
+                <p><strong>Meaningful work.</strong> Sounds like cliché, but working in something I love and enjoy makes
+                    a big difference in my life. Especially if it's something I'm a user of.</p>
+                <p>At this point in my life I wouldn't switch jobs for money or status, I'd do it only for more
+                    meaningful work.</p>
+            </li>
+        </ul>
+
+        <h2>And, that's me in a nutshell</h2>
+
+        <p>If you know Spanish and want to improve your money game, <a href="https://twitter.com/PerroDinero">follow me
+                on
+                Twitter</a>, the only social network I have.
+        </p>
+
+        <p>If you want to hire me as a developer, <a href="">download my CV</a> or visit my <a
+                href="https://www.linkedin.com/in/david-ojeda-lopez/">LinkedIn profile</a>.</p>
+
+        <p>If you just want to talk, or anything else, <a target="_blank" href="mailto:davidojeda@hey.com">email me</a>.
+            Yes, I still
+            like email. And yes, puppy pictures are welcome.</p>
+    </article>
+</body>
+
+</html>

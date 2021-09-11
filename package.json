@@ -1,0 +1,29 @@
+{
+  "name": "davidojedalopez.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf _site",
+    "serve": "eleventy --serve --watch",
+    "build:eleventy": "eleventy",
+    "build": "run-s clean build:*",
+    "debug": "DEBUG=* eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidojedalopez/davidojedalopez.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidojedalopez/davidojedalopez.github.io/issues"
+  },
+  "homepage": "https://github.com/davidojedalopez/davidojedalopez.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-plugin-rss": "^1.0.9",
+    "eleventy-plugin-reading-time": "0.0.1"
+  }
+}

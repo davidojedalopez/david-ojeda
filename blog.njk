@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+title: Blog
+---
+
+<h1>Blog archive</h1>
+
+{% for post in collections.posts %}
+    <a href="{{ post.url | url }}">
+        <h2>{{ post.data.title }}</h2>
+    </a>
+    <div style="font-size: .9rem; margin-top: -1.8rem; text-decoration: none !important;">
+        <time datetime="{{ post.data.published_at | htmlDateString }}">{{ post.data.published_at | readableDate }}</time> <span>·</span> <span>Reading time: {{ post | readingTime }}</span>
+    </div>
+{% endfor %}

@@ -1,6 +1,7 @@
 ---
 title: Find your enough.
 published_at: 2021-10-12
+date: 2021-10-12
 ---
 
 **Enough** is a moving target for most people. The closest you are to reaching _enough_, the farther away it will move when you achieve it.

@@ -1,6 +1,7 @@
 ---
 title: On learning, but not really learning.
 published_at: 2022-03-11
+date: 2022-03-11
 ---
 
 I've read many books on business, self-improvement, entrepreneurship, and software. And I consider myself guilty of not applying the learnings I got as much as I should.

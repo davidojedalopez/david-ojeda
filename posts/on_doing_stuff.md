@@ -1,6 +1,7 @@
 ---
 title: On creating content, by building stuff.
 published_at: 2022-06-25
+date: 2022-06-25
 ---
 
 I have way more content to share when I'm doing stuff in real-life.

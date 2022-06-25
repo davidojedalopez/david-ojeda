@@ -1,6 +1,7 @@
 ---
 title: This blog.
 published_at: 2021-09-28
+date: 2021-09-28
 ---
 
 ## Why a blog in 2021?

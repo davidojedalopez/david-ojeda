@@ -114,8 +114,8 @@
 <body>
     <header class="flex flex-col space-y-6 mb-20">
         <a href="/" class="text-6xl font-extrabold no-underline hover:decoration-wavy hover:decoration-2 hover:underline underline-offset-4 decoration-emerald-700">David Ojeda</a>
-        {% if page.url.startsWith('/blog') and page.url != '/blog/' %}
-            <a href="/blog" class="text-2xl no-underline hover:decoration-wavy hover:decoration-2 hover:underline underline-offset-4 decoration-emerald-700">All posts</a>
+        {% if page.filePathStem.startsWith('/posts') and page.filePathStem != '/posts/' %}
+            <a href="/archive" class="text-2xl no-underline hover:decoration-wavy hover:decoration-2 hover:underline underline-offset-4 decoration-emerald-700">All posts</a>
         {% endif %}
     </header>
     <main class="prose prose-xl prose-a:no-underline prose-a:text-emerald-700 hover:prose-a:decoration-wavy hover:prose-a:decoration-1 hover:prose-a:underline">        

@@ -1,5 +1,5 @@
 ---
-title: On creating content, by building stuff.
+title: Creating content, by building stuff
 published_at: 2022-06-25
 date: 2022-06-25
 ---

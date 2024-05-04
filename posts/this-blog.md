@@ -1,5 +1,5 @@
 ---
-title: This blog.
+title: This blog
 published_at: 2021-09-28
 date: 2021-09-28
 ---
@@ -18,10 +18,10 @@ It's hard, and it's also rewarding. More philosophical, if you may.
 
 ## What do I write about?
 
-Random topics, but mainly whatever I wrote about in [my home page](/).
+Whatever I feel like, truly nichless.
 
 ## I don't look for readers
 
-First and foremost, I write for myself—to clear my mind. If something ends up being interesting for someone, great. If not, I don't care.
+First and foremost, I write for myself; to clear my mind. If something ends up being interesting for someone, great. If not, that's okay.
 
 ## That's it

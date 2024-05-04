@@ -90,8 +90,9 @@
 
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml"
         title="{{ metadata.title }}">
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.15/dist/base.css" />
-    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/typography@0.4.x/dist/typography.min.css" />
+{#     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.15/dist/base.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/typography@0.4.x/dist/typography.min.css" /> #}
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <link rel="preconnect" href="https://unpkg.com/">
     <style>
         @font-face {
@@ -103,27 +104,21 @@
                 url('/fonts/rubik-v14-latin-regular.woff') format('woff');
             font-display: swap;
         }
-
-        main {
+        main, header {
             margin: 2rem;
             font-family: 'Rubik', 'sans-serif'
-        }
-        header {
-            margin: 1rem;
-        }
-        header a {
-            text-decoration: underline;
-            padding: .5rem 1rem;
-        }
+        } 
     </style>
 </head>
 
 <body>
-    <header>
-        <a href="/">Home</a>
-        <a href="/blog">Blog</a>
+    <header class="flex flex-col space-y-6 mb-20">
+        <a href="/" class="text-6xl font-extrabold no-underline hover:decoration-wavy hover:decoration-2 hover:underline underline-offset-4 decoration-emerald-700">David Ojeda</a>
+        {% if page.url.startsWith('/blog') and page.url != '/blog/' %}
+            <a href="/blog" class="text-2xl no-underline hover:decoration-wavy hover:decoration-2 hover:underline underline-offset-4 decoration-emerald-700">All posts</a>
+        {% endif %}
     </header>
-    <main class="prose prose-xl">
+    <main class="prose prose-xl prose-a:no-underline prose-a:text-emerald-700 hover:prose-a:decoration-wavy hover:prose-a:decoration-1 hover:prose-a:underline">        
         {{ content | safe }}
     </main>
 </body>

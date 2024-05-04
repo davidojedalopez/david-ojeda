@@ -1,5 +1,5 @@
 ---
-title: On learning, but not really learning.
+title: On learning, but not really learning
 published_at: 2022-03-11
 date: 2022-03-11
 ---

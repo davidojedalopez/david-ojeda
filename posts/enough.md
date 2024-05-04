@@ -1,5 +1,5 @@
 ---
-title: Find your enough.
+title: Find your enough
 published_at: 2021-10-12
 date: 2021-10-12
 ---

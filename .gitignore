@@ -5,6 +5,7 @@ credentials.json
 .env
 token.json
 .DS_Store
+.vscode/
 
 # Local Netlify folder
 .netlify

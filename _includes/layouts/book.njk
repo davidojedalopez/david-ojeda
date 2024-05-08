@@ -29,3 +29,14 @@ permalink: "/{{ page.fileSlug }}/"
       {% endfor %}
     </ul>
 </article>
+
+<button id="#back-to-top" title="Go to top">Back to top</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var backToTopButton = document.getElementById("#back-to-top");
+    backToTopButton.addEventListener('click', function() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+});
+</script>

@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+title: "Books"
+permalink: books/
+---
+
+<h1>Books</h1>
+
+<article class="prose prose-xl">
+  <ul>
+    {% for book in collections.books | sort(attribute='date_read') %}
+      <li>
+        <a href="{{ book.url | url }}" class="flex space-x-2 items-baseline">
+          <span>{{ book.data.title }}</span> <span class="text-sm">by {{ book.data.author }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</article>

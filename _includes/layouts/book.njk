@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+permalink: "/{{ page.fileSlug }}/"
+---
+
+<article class="prose prose-xl prose-a:no-underline prose-a:text-emerald-700/50">
+    <h1>{{ title }}</h1>
+    <div style="font-size: .9rem; margin-top: -2.3rem;">
+        <span>by {{ author }}</span>
+        <span>•</span> 
+        </span> Read on <time datetime="{{ read_at | htmlDateString }}">{{ read_at | readableDate }}</time>
+    </div>
+
+    <p>Text in black are quotes; text in green are my notes. I sometimes write in Spanish.</p>
+
+    <ul>
+      {% for quote in quotes %}
+        <li id="quote-{{ loop.index }}">
+            <p>{{ quote.raw }} <a href="#quote-{{ loop.index }}" class="no-underline prose:text-emerald-700/10">#</a></p>   
+
+            {% if quote.comments | length %}
+                <ul>
+                    {% for comment in quote.comments %}              
+                        <li class="text-emerald-700/90">{{ comment }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}                     
+        </li>
+      {% endfor %}
+    </ul>
+</article>

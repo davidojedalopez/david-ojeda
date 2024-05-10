@@ -3,7 +3,7 @@ layout: layouts/base.njk
 title: David Ojeda
 ---
 
-<article class="">
+<article>
   <p>
     I'm a professional procrastinator, and I ocassionally build stuff.
     <br />Welcome to my little, nichless space on the internet.
@@ -11,7 +11,7 @@ title: David Ojeda
 </article>
 
 <article>
-  <h2>Latest thoughts</h2>
+  <h1>Latest thoughts</h1>
   <ul>
     {% for post in collections.posts | reverse | head(5) %}
       <li>

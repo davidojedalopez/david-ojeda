@@ -3,9 +3,9 @@ layout: layouts/base.njk
 permalink: "/{{ page.fileSlug }}/"
 ---
 
-<article class="prose prose-xl prose-a:no-underline prose-a:text-emerald-700/50">
+<article class="prose prose md:prose-xl prose-a:no-underline prose-a:text-emerald-700/50">
     <h1>{{ title }}</h1>
-    <div style="font-size: .9rem; margin-top: -2.3rem;">
+    <div class="text-sm">
         <span>by {{ author }}</span>
         <span>•</span> 
         </span> Read on <time datetime="{{ read_at | htmlDateString }}">{{ read_at | readableDate }}</time>

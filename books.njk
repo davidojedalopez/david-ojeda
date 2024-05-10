@@ -6,11 +6,11 @@ permalink: books/
 
 <h1>Books</h1>
 
-<article class="prose prose-xl">
-  <ul>
+<article class="prose prose md:prose-xl">
+  <ul class="list-outside">
     {% for book in collections.books | sort(attribute='date_read') %}
       <li>
-        <a href="{{ book.url | url }}" class="flex space-x-2 items-baseline">
+        <a href="{{ book.url | url }}" class="flex flex-col items-baseline">
           <span>{{ book.data.title }}</span> <span class="text-sm">by {{ book.data.author }}</span>
         </a>
       </li>

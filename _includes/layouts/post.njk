@@ -3,7 +3,7 @@ layout: layouts/base.njk
 permalink: "/{{ page.fileSlug }}/"
 ---
 
-<article class="prose prose-xl">
+<article class="prose prose md:prose-xl">
     <h1>{{ title }}</h1>
     <div style="font-size: .9rem; margin-top: -2.3rem;">
         <time datetime="{{ published_at | htmlDateString }}">{{ published_at | readableDate }}</time> <span>·</span> <span>Reading time: {{ content | readingTime }}</span>

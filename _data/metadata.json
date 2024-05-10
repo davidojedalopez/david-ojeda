@@ -1,16 +1,16 @@
 {
-    "title": "David Ojeda",
-    "url": "https://davidojeda.dev",
-    "description": "David's personal website.",
-    "cover": "img/cover.png",
-    "feed": {
-        "subtitle": "David's personal website.",
-        "filename": "feed.xml",
-        "path": "/feed.xml",
-        "id": "https://davidojeda.dev/"
-    },
-    "author": {
-        "name": "David Ojeda",
-        "email": "davidojeda@hey.com"
-    }
+  "title": "David Ojeda López",
+  "url": "https://davidojeda.dev",
+  "description": "David's personal website.",
+  "cover": "img/cover.png",
+  "feed": {
+    "subtitle": "David's personal website.",
+    "filename": "feed.xml",
+    "path": "/feed.xml",
+    "id": "https://davidojeda.dev/"
+  },
+  "author": {
+    "name": "David Ojeda López",
+    "email": "davidojeda@hey.com"
+  }
 }

@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>David Ojeda López</title>
+    <title>{{ renderData.title or title or metadata.title }}</title>
 
-    <meta name="title" content="{{ metadata.title }}">
-    <meta name="description" content="{{ metadata.description }}">
+    <meta name="title" content="{{ renderData.title or title or metadata.title }}">
+    <meta name="description" content="{{ renderData.description or description or metadata.description }}">
+
     <meta name="author" content="{{ metadata.author.name }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

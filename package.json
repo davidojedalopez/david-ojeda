@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf _site",
-    "serve": "eleventy --serve --watch",
-    "build": "npm run clean && eleventy",
+    "dev:11ty": "eleventy --serve --watch --incremental",
+    "dev:tailwind": "npx tailwindcss -i ./styles/tailwind.css -o ./_site/base.css --watch",
+    "dev": "npm-run-all clean --parallel dev:*",
+    "build:tailwind": "npx tailwindcss -i ./styles/tailwind.css -o ./_site/base.css --minify",
+    "build:11ty": "eleventy",
+    "build": "run-s clean build:tailwind build:11ty",
     "debug": "DEBUG=* eleventy"
   },
   "repository": {
@@ -23,7 +27,10 @@
   "devDependencies": {
     "@11ty/eleventy": "2.0.1",
     "@11ty/eleventy-plugin-rss": "^1.1.0",
-    "eleventy-plugin-reading-time": "0.0.1"
+    "@tailwindcss/typography": "^0.5.13",
+    "eleventy-plugin-reading-time": "0.0.1",
+    "npm-run-all": "^4.1.5",
+    "tailwindcss": "^3.4.3"
   },
   "dependencies": {
     "js-yaml": "^4.1.0"

@@ -3,9 +3,9 @@ const fs = require("fs");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const readingTime = require('eleventy-plugin-reading-time');
 const path = require("path");
+const yaml = require("js-yaml");
 
 Settings.defaultLocale = 'en-US';
-
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginRss);
@@ -51,6 +51,8 @@ module.exports = function (eleventyConfig) {
 
         return array.slice(0, n);
     });
+
+    eleventyConfig.addDataExtension("yml, yaml", (contents) => yaml.load(contents));
 
     // Filter source file names using a glob
 

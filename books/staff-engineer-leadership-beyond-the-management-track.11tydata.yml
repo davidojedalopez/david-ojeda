@@ -1,0 +1,35 @@
+quotes:
+  - raw: There is a significant learning curve in Staff-plus roles that initially trip most folks up. [...]. The delayed feedback cycle can initially feel quite demoralizing as you replace the visceral coding REPL with the uneven progress of mentorship, relationship building, and strategy.
+    comments:
+      - When you're actively developing software in a not-so high leadership position, your feedback loops are quite fast. You code a feature, create an automated test, make it fail/pass, deploy to staging/prod, check a few queries and dashboards, and there you go, you have feedback all throughout the process, and sometimes even in just a few hours of difference.
+      - When you start going to leadership positions, feedback loops' time starts to increase. Now you work on bigger initiatives that touches many different parts of a system, and you need input from multiple people. You start a document and start asking around things you don't fully understand, which may take you weeks to mature. Your feedback to know if what you're planning is working or not starts to spread out.
+      - Then, as you continue moving up the ladder, now you need to think of strategies, not just individual features or initiatives, and a strategy might take months to setup, and many more months to execute, and only when you've been executing said strategy for quite some time, you start receiving feedback and metrics. This can be demoralizing for some people.
+  - raw: Work on what matters to make the most of the working hours you have.
+  - raw: Stop preening. Preening is doing low-impact, high-visibility work. Many companies conflate high-visibility and high-impact so strongly that they can't distinguish between preening and impact. Which is why it's not uncommon to see some companies' senior-most engineers spend the majority of their time doing work that's of dubious value, but that is frequently recognized in company meetings.
+    comments:
+      - Of the pending work that we have, what's the impact and effort of each of the tasks?
+      - I've done this before, going for low-effort, dubious impact, high-visibility work. It feels nice, and people get recognized for it, sometimes. But I've found people that always ask what's the business value that something like that provides, and there's when one "gets caught".
+      - I should always think of the impact I'm going to report when doing such tasks.
+  - raw: Edit. A surprising number of projects are one small change away from succeeding, one quick modification away from unlocking a new opportunity, or one conversation away from consensus. I think of making those small changes, quick modifications, and short conversations as editing your team's approach.
+  - raw: Finish things. We only get value from finishing projects, and getting a project over the finish line is the magical moment it goes from risk to leverage. Time spent getting work finished is always time well spent.
+    comments:
+      - We only get value from things that are in production, that are affecting our systems, that are actually seen from customers.
+      - A project 99% finished, but not shipped, is of 0 value. Always be thinking on ways to gradually add value, so that a 99% finished project, already has some of its code deployed and working.
+  - raw: Write an engineering strategy to guide your organization's approach to supporting your company's business objectives with its architecture, technology selection, and organizational structure.
+  - raw: To write an engineering strategy, write five design documents, and pull the similarities out. That's your engineering strategy. To write an engineering vision, write five engineering strategies, and forecast their implications two years into the future. That's your engineering vision.
+  - raw: "Recommendations to write design documents: Start from the problem. The clearer the problem statement, the more obvious the solutions.; Keep the template simple. Overloaded templates discourage folks from writing design documents in the first place; Gather in review together, write alone. Most folks are better writers than they are editors. Which means it's usually harder to edit a group document into clear writing then to identify one author to write a clear document. Gather perspectives widely but write alone."
+    comments:
+      - I've been part of meetings where the purpose was to create and edit an RFC, and they were tedious. I don't find it comfortable to be creating a document like that pairing with someone else. I'd rather write it on my own, and then ask for feedback on it.
+      - Gather perspectives widely, but write alone is key.
+  - raw: Create technical quality to maintain the quality of your company's architecture and software as it grows and tacks over time.
+  - raw: Stay aligned with authority to remain an effective leader over time.
+    comments:
+      - Following the strategy defined by the organization is the way to go. This doesn't mean that you can't challenge the decisions of the company, but you are allowed to disagree, and commit. If you're not okay with a decision, externalize it, fight for your point of view, but still follow to the agreement. If you make them change their mind, good, if not, it's okay too. At least you made your point and hopefully they took it into consideration. One day you might be on their position and other people are going to challenge you. You'll know how it feels.
+  - raw: To lead, you have to follow. Having a vivid sense of how things ought to work is a powerful leadership tool, but it's also essential to learn to blend your vision with the visions from your peers and leadership.
+  - raw: Create space for others so that your team grows stronger than your contribution.
+  - raw: Build a network of peers to vet difficult decisions and to give honest feedback when your role's authority starts to temper feedback.
+  - raw: Never surprise your manager. Nothing destroys trust faster than surprising your manager. Steering a large organization often involves juggling several projects and problems in your head at once, and surprises threaten the juggler's rhythm.
+  - raw: "Ritu Vincent suggests: [...]. A mistake I made early on my one-on-ones was telling my manager what I thought they wanted to hear, instead of what I actually felt."
+    comments:
+      - I think I've always been like this. Always externalizing how I really feel about the decisions or ways of working of the team and organization.
+      - I don't worry much about what people want to hear, but rather, I focus on how things are, and how I am looking at things.

@@ -116,6 +116,9 @@
         {% if page.filePathStem.startsWith('/posts') and page.filePathStem != '/posts/' %}
             <a href="/archive" class="text-2xl no-underline hover:decoration-wavy hover:decoration-2 hover:underline underline-offset-4 decoration-emerald-700">All posts</a>
         {% endif %}
+        {% if page.filePathStem.startsWith('/books') and page.filePathStem != '/books/' %}
+            <a href="/books" class="text-2xl no-underline hover:decoration-wavy hover:decoration-2 hover:underline underline-offset-4 decoration-emerald-700">All books</a>
+        {% endif %}
     </header>
     <main class="prose prose md:prose-xl prose-a:no-underline prose-a:text-emerald-700 hover:prose-a:decoration-wavy hover:prose-a:decoration-1 hover:prose-a:underline">        
         {{ content | safe }}

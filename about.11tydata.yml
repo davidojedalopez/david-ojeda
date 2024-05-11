@@ -2,7 +2,25 @@ timeline:
   2024:
     May:
       - title: Resurrected this website.
+    January:
+      - title: Promoted to Lead Software Engineer at Nubank.
+  2022:
+    August:
+      - title: Promoted to Senior Software Engineer at Nubank.
   2021:
+    October:
+      - title: Started working at Nubank as a Software Engineer.
+      - title: Left Wizeline.
     September:
       - title: Transformed this site from a technical blog to my personal website.
         link: https://github.com/davidojedalopez/david-ojeda/commit/8a301d426cec904ef2041312cf14a466f6ec2799
+  2020:
+    November:
+      - title: Started working at Wizeline as a Software Engineer.
+      - title: Left Handy.
+  2019:
+    June:
+      - title: Promoted to Technical Lead at Handy.
+  2016:
+    May:
+      - title: Started working at Handy as a Software Developer.

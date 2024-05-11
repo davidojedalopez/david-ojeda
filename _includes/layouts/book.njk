@@ -24,7 +24,13 @@ permalink: "/{{ page.fileSlug }}/"
                         <li class="text-emerald-700/90">{{ comment }}</li>
                     {% endfor %}
                 </ul>
-            {% endif %}                     
+            {% endif %}
+
+            {% if quote.images | length %}
+                {% for image in quote.images %}
+                    <img src="{{ image.url }}" alt="{{ image.alt }}">
+                {% endfor %}
+            {% endif %}               
         </li>
       {% endfor %}
     </ul>

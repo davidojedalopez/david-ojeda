@@ -52,6 +52,8 @@ quotes:
   - raw: "The average speaker speaks at a rate of 120 words a minute. It follows that a twenty-minute speech should be 2,400 words long."
   - raw: "the steps in the Motivating Sequence are (a) get attention, (b) state the problem, concern, or need the potential customer for your product has, (c) show him that your product is the solution to his problem or need, (d) prove that your product is superior to other products addressing the same needs and problems your does, and (e) ask for the order with your call to action."
   - raw: "I often use a format where the first part of the bullet is the feature, and after a dash comes the benefit (e.g., ““Quick-release adhesive system—your vehicle graphics stay clean and don’t stick together”)."
+    comments:
+      - Los features y beneficios no están peleados. Es mala idea solo mostrar los features porque el cliente no se identifica. Es mejor poner lo beneficios porque son más tangibles para el usuario, pero separar el feature y el beneficio con un guión largo en una misma oración cumple los dos propósitos.
   - raw: "In your landing page headline, engage the target prospect by promising a big and compelling benefit."
   - raw: "To recruit affiliates or make money being an affiliate for other marketers, visit www.affiliatesdirectory.com."
   - raw: "There’s plenty of copywriting research that all points to one conclusion: headlines that start with numbers are often winners."

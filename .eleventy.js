@@ -22,6 +22,13 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  eleventyConfig.addFilter("readableDateNoDay", (dateObj) => {
+    if (dateObj instanceof String) {
+      dateObj = new Date(dateObj);
+    }
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("LLLL, yyyy");
+  });
+
   eleventyConfig.addFilter("toISOString", (dateObj) => {
     if (dateObj instanceof String) {
       dateObj = new Date(dateObj);

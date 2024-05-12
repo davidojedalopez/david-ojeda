@@ -18,13 +18,18 @@ permalink: "/{{ page.fileSlug }}/"
         <li id="quote-{{ loop.index }}">
             <p>{{ quote.raw }} <a href="#quote-{{ loop.index }}" class="no-underline prose:text-emerald-700/10">#</a></p>   
 
-            {% if quote.comments | length %}
+            {% if (quote.links | length) or (quote.comments | length) %}
                 <ul>
-                    {% for comment in quote.comments %}              
+                    {% for comment in quote.comments %}
                         <li class="text-emerald-700/90">{{ comment }}</li>
                     {% endfor %}
+                    {% for link in quote.links %}
+                        <li class="prose-a:text-emerald-700/90">
+                            <a href="{{ link.url }}">{{ link.text }} #</a>
+                        </li>
+                    {% endfor %}
                 </ul>
-            {% endif %}
+            {% endif %}            
 
             {% if quote.images | length %}
                 {% for image in quote.images %}

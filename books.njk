@@ -6,7 +6,7 @@ permalink: books/
 
 <h1>Books</h1>
 
-<article class="prose prose md:prose-xl">
+<article class="prose prose-xl">
   <ul class="list-outside">
     {% for book in collections.books | sort(attribute='data.read_at') | reverse %}
       <li>

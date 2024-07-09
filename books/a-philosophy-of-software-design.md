@@ -1,5 +1,5 @@
 ---
 title: A Philosophy of Software Design
 author: John Ousterhout
-read_at: 2024-07-09
+read_at: 2021-09-30
 ---

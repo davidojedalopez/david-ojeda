@@ -1,3 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@source "../*.njk";
+@source "../_includes/**/*.njk";
+@source "../books/**/*.md";
+@source "../posts/**/*.md";

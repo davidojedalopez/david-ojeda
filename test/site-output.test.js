@@ -47,6 +47,10 @@ test("the production build includes the complete posts feed", () => {
       `expected _site/${output} to exist`
     );
   }
+  assert.ok(
+    !fs.existsSync(path.join(projectRoot, "_site", ".hermes")),
+    "agent planning files must not be published"
+  );
 
   const about = fs.readFileSync(
     path.join(projectRoot, "_site", "about", "index.html"),

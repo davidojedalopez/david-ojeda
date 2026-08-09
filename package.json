@@ -39,6 +39,6 @@
     "tailwindcss": "^3.4.3"
   },
   "dependencies": {
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^5.2.3"
   }
 }

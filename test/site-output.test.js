@@ -48,6 +48,18 @@ test("the production build includes the complete posts feed", () => {
     );
   }
 
+  const about = fs.readFileSync(
+    path.join(projectRoot, "_site", "about", "index.html"),
+    "utf8"
+  );
+  assert.match(about, /Moved to Rio de Janeiro, Brazil\./);
+
+  const book = fs.readFileSync(
+    path.join(projectRoot, "_site", "the-beginning-of-infinity", "index.html"),
+    "utf8"
+  );
+  assert.match(book, /No man ever steps in the same river twice/);
+
   const feedPath = path.join(projectRoot, "_site", "feed.xml");
   assert.ok(fs.existsSync(feedPath), "expected _site/feed.xml to exist");
 

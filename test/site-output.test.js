@@ -6,6 +6,15 @@ const test = require("node:test");
 
 const projectRoot = path.resolve(__dirname, "..");
 
+test("the clean script does not rely on an undeclared transitive binary", () => {
+  const packageJson = JSON.parse(
+    fs.readFileSync(path.join(projectRoot, "package.json"), "utf8")
+  );
+
+  assert.doesNotMatch(packageJson.scripts.clean, /\brimraf\b/);
+  assert.match(packageJson.scripts.clean, /rmSync/);
+});
+
 test("the production build includes the complete posts feed", () => {
   const build = spawnSync("npm", ["run", "build"], {
     cwd: projectRoot,
@@ -22,6 +31,22 @@ test("the production build includes the complete posts feed", () => {
   );
   assert.match(stylesheet, /\.text-6xl/);
   assert.match(stylesheet, /\.prose/);
+  assert.match(stylesheet, /\.decoration-emerald-700/);
+  assert.match(stylesheet, /\.md\\:prose-xl/);
+
+  for (const output of [
+    "index.html",
+    "about/index.html",
+    "books/index.html",
+    "archive/index.html",
+    "cant-stop-playing/index.html",
+    "the-beginning-of-infinity/index.html",
+  ]) {
+    assert.ok(
+      fs.existsSync(path.join(projectRoot, "_site", output)),
+      `expected _site/${output} to exist`
+    );
+  }
 
   const feedPath = path.join(projectRoot, "_site", "feed.xml");
   assert.ok(fs.existsSync(feedPath), "expected _site/feed.xml to exist");

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean": "rimraf _site",
+    "clean": "node -e \"require('node:fs').rmSync('_site', { recursive: true, force: true })\"",
     "dev:11ty": "eleventy --serve --watch --incremental",
     "dev:tailwind": "npx tailwindcss -i ./styles/tailwind.css -o ./_site/base.css --watch",
     "dev": "npm-run-all clean --parallel dev:*",

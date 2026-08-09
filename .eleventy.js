@@ -8,7 +8,7 @@ const yaml = require("js-yaml");
 Settings.defaultLocale = "en-US";
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(pluginRss.default);
   eleventyConfig.addPlugin(readingTime);
 
   eleventyConfig.setDataDeepMerge(true);

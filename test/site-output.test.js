@@ -1,0 +1,36 @@
+const assert = require("node:assert/strict");
+const fs = require("node:fs");
+const path = require("node:path");
+const { spawnSync } = require("node:child_process");
+const test = require("node:test");
+
+const projectRoot = path.resolve(__dirname, "..");
+
+test("the production build includes the complete posts feed", () => {
+  const build = spawnSync("npm", ["run", "build"], {
+    cwd: projectRoot,
+    encoding: "utf8",
+  });
+
+  const buildOutput = `${build.stdout}\n${build.stderr}`;
+  assert.equal(build.status, 0, buildOutput);
+  assert.doesNotMatch(buildOutput, /matching all of `node_modules`/);
+
+  const stylesheet = fs.readFileSync(
+    path.join(projectRoot, "_site", "base.css"),
+    "utf8"
+  );
+  assert.match(stylesheet, /\.text-6xl/);
+  assert.match(stylesheet, /\.prose/);
+
+  const feedPath = path.join(projectRoot, "_site", "feed.xml");
+  assert.ok(fs.existsSync(feedPath), "expected _site/feed.xml to exist");
+
+  const feed = fs.readFileSync(feedPath, "utf8");
+  assert.match(feed, /<feed xmlns="http:\/\/www\.w3\.org\/2005\/Atom">/);
+  assert.match(feed, /<title>David Ojeda López<\/title>/);
+  assert.match(feed, /<link href="https:\/\/davidojeda\.dev\/cant-stop-playing\/"/);
+  assert.match(feed, /<content type="html">&lt;p&gt;/);
+  assert.doesNotMatch(feed, /<!\[CDATA\[/);
+  assert.equal((feed.match(/<entry>/g) || []).length, 6);
+});

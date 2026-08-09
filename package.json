@@ -11,7 +11,8 @@
     "build:tailwind": "npx tailwindcss -i ./styles/tailwind.css -o ./_site/base.css --minify",
     "build:11ty": "eleventy",
     "build": "run-s clean build:tailwind build:11ty",
-    "debug": "DEBUG=* eleventy"
+    "debug": "DEBUG=* eleventy",
+    "test": "node --test"
   },
   "repository": {
     "type": "git",

@@ -33,6 +33,8 @@ test("the production build includes the complete posts feed", () => {
   assert.match(stylesheet, /\.prose/);
   assert.match(stylesheet, /\.decoration-emerald-700/);
   assert.match(stylesheet, /\.md\\:prose-xl/);
+  assert.match(stylesheet, /\.prose-a\\:hover\\:underline/);
+  assert.doesNotMatch(stylesheet, /\.hover\\:prose-a\\:underline:hover/);
 
   for (const output of [
     "index.html",

@@ -41,5 +41,10 @@
   },
   "dependencies": {
     "js-yaml": "^5.3.0"
+  },
+  "overrides": {
+    "@tailwindcss/cli": {
+      "@parcel/watcher": "2.6.0"
+    }
   }
 }
